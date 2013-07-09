@@ -18,8 +18,8 @@ h1 {
   font-size: 3.0em;
   position: relative;
 
-
 }
+
 
 .content {
   width:100%;
@@ -30,11 +30,9 @@ h1 {
   bottom: 0;
 }
 
-section {
-  background-size: cover;
-}
 
-.sectionone {
+
+.home-page {
   width: inherit;
   height: 100%;
   position: relative;
@@ -49,7 +47,7 @@ section {
   background: no-repeat center center;
   background-size: contain;
   background-image: url(../images/missionstatement.jpg);
-  bottom:5%;
+  bottom:8%;
 }
 
 .words {
@@ -60,16 +58,11 @@ section {
   background-color:white;
 }
 
-.sectiontwo {
+.attorney-page {
   width: inherit;
-  height: 100%;
+  height: 150%;
   position: relative;
-  background-image: url(../images/water_background.jpg);
+  background-color:#41473d;
 
 }
-.sectionthree {
-  width: inherit;
-  height: 100%;
-  position: relative;
-  background-color: green;
-}
+
