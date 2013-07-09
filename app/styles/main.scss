@@ -14,9 +14,34 @@ header {
 }
 
 h1 {
-  text-align: center;
+  text-align: left;
   font-size: 3.0em;
   position: relative;
+  background: #353b30;
+  color: white;
+
+
+}
+
+section {
+  position: relative;
+  width: inherit;
+  padding-left: 75px;
+  padding-top: 150px;
+
+}
+
+span {
+  color: #578c24;
+}
+
+
+
+article p {
+  float:right;
+  position: relative;
+  background: #353b30;
+  color: white;
 
 }
 
@@ -72,5 +97,13 @@ h1 {
   width: 75%;
   background-color: #353b30;
   right: 0;
+  border-left:#ffffff dashed 2px;
+}
+
+.name {
+    float: left;
+    color: white;
+    background: #353b30;
+    position: relative;
 }
 
