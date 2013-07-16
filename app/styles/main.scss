@@ -57,18 +57,25 @@ article p {
   bottom: 0;
 }
 
-.location {
+.beverly {
+  position: absolute;
   width: 100px;
   height: 100px;
   background: blue;
-  float: right;
+  float: left;
+  top: 230px;
+  margin: 0 0 0 40px;
 }
 
-.location-two {
+.new-york {
+  position: absolute;
   width: 100px;
   height: 100px;
-  background: red;
-  float: left;
+  background-image: url(../images/nybadge.gif);
+  background-size: contain;
+  right:0;
+  top: 230px;
+  margin: 0 40px 0 0;
 }
 
 
