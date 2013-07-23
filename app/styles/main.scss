@@ -63,8 +63,48 @@ article p {
   font-weight: 200;
   font-size: 12px;
   color: #F2F2F2;
-  margin: 130px;
+  margin: 135px;
 }
+
+.button {
+  position:absolute;
+  height: 30px;
+  width:170px;
+  left: 50%;
+  margin-left:-85px;
+  bottom: 50px;
+  color: #578c24;
+  font-family: "jaf-facitweb";
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing:2px;
+  text-align: center;
+  background-color: #343b2f;
+  border-radius:6px;
+  padding-top:10px;
+  box-shadow: inset 0px 1px 3px #13140d;
+
+
+}
+
+.button:hover {
+  background-color: #434a3e;
+  box-shadow: inset 0px 1px 3px #24251f;
+  color: #578c24;
+  text-decoration: none;
+  cursor: default;
+
+}
+
+.button:active {
+  background-color: #343b2f;
+  box-shadow: inset 0px 1px 1px #13140d;
+  color: #578c24;
+  text-decoration: none;
+  cursor: default;
+
+}
+
 
 
 .content {
