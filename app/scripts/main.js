@@ -17,3 +17,20 @@ require(['app', 'jquery', 'bootstrap'], function (app, $) {
     console.log(app);
     console.log('Running jQuery %s', $().jquery);
 });
+
+$(document).ready(function(){
+
+    $(document).scroll(function() {
+
+        var top = $(document).scrollTop();
+
+        if (top > 800) {
+            $('nav').addClass("display");
+        }
+
+        else {
+            $('nav').removeClass("display");
+        }
+
+    });
+});
