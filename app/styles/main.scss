@@ -83,13 +83,16 @@ article p {
   border-radius:6px;
   padding-top:10px;
   box-shadow: inset 0px 1px 3px #13140d;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
 
 
 }
 
 .button:hover {
   background-color: #434a3e;
-  box-shadow: inset 0px 1px 3px #24251f;
+  box-shadow: 0px 1px 3px #24251f;
   color: #578c24;
   text-decoration: none;
   cursor: default;
