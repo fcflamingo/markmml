@@ -25,12 +25,13 @@ $(document).ready(function(){
         var top = $(document).scrollTop();
 
         if (top > 800) {
-            $('nav').addClass("display");
+            $('nav').addClass("fade-in", 2000);
         }
 
         else {
-            $('nav').removeClass("display");
+            $('nav').removeClass("fade-in");
         }
 
     });
+
 });
