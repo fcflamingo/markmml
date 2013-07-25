@@ -41,7 +41,7 @@ h1 {
   color: white;
   font-weight: 800;
   font-family: "jaf-facitweb";
-  text-shadow: 1px 1px 1px #666;
+  text-shadow: 1px 1px 1px #1b1b1b;
 }
 
 h2{
@@ -343,11 +343,24 @@ a:hover {
 
 .bh-icon{
   float:left;
-  background:blue;
-  position: absolute;
-  height: 10%;
-  width: 10%;
-  right:20px;
+  background:url(../images/beverlyhillsbadge.gif);
+  background-size: contain;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  right: 94px;
+  top: 48px;
+}
+
+.ny-icon{
+  float:left;
+  background:url(../images/nybadge.gif);
+  background-size: contain;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  right: 94px;
+  top: 48px;
 }
 
 
