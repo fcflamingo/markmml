@@ -1,17 +1,22 @@
 require.config({
     paths: {
         jquery: '../bower_components/jquery/jquery',
+        stellar: '../bower_components/jquery.stellar/jquery.stellar',
         bootstrap: 'vendor/bootstrap'
     },
     shim: {
         bootstrap: {
             deps: ['jquery'],
             exports: 'jquery'
+        },
+        stellar: {
+            deps: ['jquery'],
+            exports: 'jquery'
         }
     }
 });
 
-require(['app', 'jquery', 'bootstrap'], function (app, $) {
+require(['app', 'jquery', 'stellar', 'bootstrap'], function (app, $) {
     'use strict';
 
     $(document).scroll(function() {
