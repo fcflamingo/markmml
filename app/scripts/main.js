@@ -13,7 +13,21 @@ require.config({
 
 require(['app', 'jquery', 'bootstrap'], function (app, $) {
     'use strict';
-    // use app here
+
+    $(document).scroll(function() {
+
+        var top = $(document).scrollTop();
+
+        if (top > 800) {
+            $('nav').addClass('fade-in', 2000);
+        }
+
+        else {
+            $('nav').removeClass('fade-in');
+        }
+
+    });
+
     console.log(app);
     console.log('Running jQuery %s', $().jquery);
 });
