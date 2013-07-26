@@ -317,7 +317,7 @@ a:hover {
 
 .attorney-page {
   width: inherit;
-  height: 1700px;
+  height: 1800px;
   position: relative;
   background-color:#41473d;
 
@@ -366,6 +366,20 @@ a:hover {
 .work-page {
   width: 100%;
   height: 450px;
+  background: #F2F2F2;
+}
+
+.circle {
+  width: 200px;
+  position: relative;
+  height: 200px;
+  background: #F2F2F2;
+  margin: 0 auto 0 auto;
+  top: -110px;
+  left: 80px;
+  border-radius:100%;
+  z-index: 3;
+
 }
 
 
