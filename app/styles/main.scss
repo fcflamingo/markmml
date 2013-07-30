@@ -19,7 +19,7 @@ nav {
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
-  display:none;
+  visibility: hidden;
 }
 
 header {
@@ -155,25 +155,7 @@ a:hover {
   cursor: default;
 }
 
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
-.fade-in {
-    display: inline;
-    opacity:0;  /* make things invisible upon start */
-    -webkit-animation:fadeIn ease-in 1;
-    -moz-animation:fadeIn ease-in 1;
-    animation:fadeIn ease-in 1;
-
-    -webkit-animation-fill-mode:forwards;
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
-
-    -webkit-animation-duration:.5s;
-    -moz-animation-duration:.5s;
-    animation-duration:.5s;
-}
 
 .display {
   display: inline;
@@ -381,6 +363,83 @@ a:hover {
   z-index: 3;
 
 }
+
+.slideRight{
+  animation-name: slideRight;
+  -webkit-animation-name: slideRight;
+
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+
+  visibility: visible !important;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-150%);
+  }
+  50%{
+    transform: translateX(4%);
+  }
+  65%{
+    transform: translateX(-2%);
+  }
+  80%{
+    transform: translateX(2%);
+  }
+  95%{
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slideRight {
+  0% {
+    transform: translateX(-150%);
+  }
+  50%{
+    transform: translateX(4%);
+  }
+  65%{
+    transform: translateX(-2%);
+  }
+  80%{
+    transform: translateX(2%);
+  }
+  95%{
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+
+@-webkit-keyframes fadeout { from { opacity:1; } to { opacity:0; } }
+@-moz-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+@keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+
+.fadeOut {
+  display: inline;
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeOut ease-in 1;
+  -moz-animation:fadeOut ease-in 1;
+  animation:fadeOut ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:.5s;
+  -moz-animation-duration:.5s;
+  animation-duration:.5s;
+}
+
 
 
 

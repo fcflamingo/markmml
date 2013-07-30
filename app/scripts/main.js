@@ -23,12 +23,14 @@ require(['app', 'jquery', 'stellar', 'bootstrap'], function (app, $) {
 
         var top = $(document).scrollTop();
 
-        if (top > 800) {
-            $('nav').addClass('fade-in', 2000);
+        if (top > 750) {
+            $('nav').removeClass('fadeOut');
+            $('nav').addClass('slideRight', 2000);
         }
 
         else {
-            $('nav').removeClass('fade-in');
+            $('nav').addClass('fadeOut');
+
         }
 
     });
