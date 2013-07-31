@@ -35,6 +35,8 @@ require(['app', 'jquery', 'stellar', 'bootstrap'], function (app, $) {
 
     });
 
+    $.stellar();
+
     console.log(app);
     console.log('Running jQuery %s', $().jquery);
 });
