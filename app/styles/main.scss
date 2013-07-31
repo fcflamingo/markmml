@@ -353,6 +353,15 @@ a:hover {
   background: #F2F2F2;
 }
 
+.stellar-clearfix{
+  margin: 0 auto 0 auto;
+  width: 600px;
+  height: 600px;
+  background: blue;
+  position: relative;
+  top: 30px;
+}
+
 .circle {
   width: 200px;
   position: relative;
@@ -366,12 +375,12 @@ a:hover {
 }
 
 .balls {
-  width: 400px;
-  height:200px;
+  width: 500px;
+  height:310px;
   position: relative;
   margin: 0 auto 0 auto;
   background: blue;
-  bottom: 90px;
+  bottom: 200px;
 
 
 }
@@ -379,25 +388,40 @@ a:hover {
 .ball {
   width: 30px;
   height:30px;
-  position: relative;
+  position: absolute;
   margin:10px 10px 10px 10px;
   border-radius: 100%;
   background: #383d35;
+
 }
 
 .one {
   width: 35px;
   height: 35px;
-  left: 350px;
-  top: 130px;
+  bottom: 10px;
+  right: 90px;
 }
 
 .two {
 
-  width: 35px;
-  height: 35px;
-  left: 600px;
-  top: 70x;
+ bottom:75px;
+  right: 120px;
+
+}
+
+.three {
+  bottom: 80px;
+  right: 40px;
+  width: 60px;
+  height:60px;
+}
+
+.four {
+  bottom: 30px;
+  right: 20px;
+  height: 20px;
+  width: 20px;
+
 
 }
 
