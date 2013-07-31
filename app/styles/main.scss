@@ -373,6 +373,16 @@ a:hover {
 
 }
 
+.music {
+  position: relative;
+  margin: 0 auto 0 auto;
+  width: 100px;
+  height: 100px;
+  background: url(../images/music.gif) no-repeat;
+  background-size: contain;
+  top: 50px;
+}
+
 .balls {
   width: 500px;
   height:310px;
