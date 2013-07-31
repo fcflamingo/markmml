@@ -349,7 +349,7 @@ a:hover {
 
 .work-page {
   width: 100%;
-  height: 800px;
+  height: 900px;
   background: #F2F2F2;
 }
 
@@ -358,7 +358,7 @@ a:hover {
   width: 600px;
   height: 600px;
   position: relative;
-  top: 100px;
+  top:170px;
 }
 
 .circle {
@@ -368,7 +368,7 @@ a:hover {
   background: #c3cead;
   margin: 0 auto 0 auto;
   border-radius:100%;
-  top: 200px;
+  top: 250px;
   z-index: 3;
 
 }
@@ -484,6 +484,17 @@ a:hover {
   width: 20px;
   top: 100px;
   left: 170px
+}
+
+.work-article {
+  position: relative;
+  background: blue;
+  width: 1000px;
+  height: 200px;
+  margin: 0 auto 0 auto;
+  top: 70px;
+
+
 }
 
 .slideRight{
