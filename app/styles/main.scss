@@ -3,499 +3,183 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
 @import 'sass-bootstrap/lib/bootstrap';
 
-nav {
-  width: 100%;
-  height: 55px;
-  position: fixed;
-  top: 0;
-  z-index: 4;
-  background: rgb(245,245,241); /* Old browsers */
-  background: -moz-linear-gradient(top, rgba(245,245,241,1) 0%, rgba(219,219,219,1) 91%, rgba(173,173,173,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(245,245,241,1)), color-stop(91%,rgba(219,219,219,1)), color-stop(100%,rgba(173,173,173,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(245,245,241,1) 0%,rgba(219,219,219,1) 91%,rgba(173,173,173,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(245,245,241,1) 0%,rgba(219,219,219,1) 91%,rgba(173,173,173,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(245,245,241,1) 0%,rgba(219,219,219,1) 91%,rgba(173,173,173,1) 100%); /* IE10+ */
-  background: linear-gradient(to bottom, rgba(245,245,241,1) 0%,rgba(219,219,219,1) 91%,rgba(173,173,173,1) 100%); /* W3C */
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  visibility: hidden;
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
 }
 
-header {
-  width: 100%;
-  height: 300px;
-  margin: 0 auto 0 auto;
-  background-color: #41473d;
-  position: absolute;
-  top:0;
-  z-index:1;
-  text-align: center;
+body {
+  font-size: 1em;
+  line-height: 1.4;
 }
 
-h1 {
-  text-align: left;
-  font-size: 3.0em;
-  position: relative;
-  background: #353b30;
-  color: white;
-  font-weight: 800;
-  font-family: "jaf-facitweb";
-  text-shadow: 1px 1px 1px #1b1b1b;
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
-h2{
-  font-weight: 800;
-  font-family: "jaf-facitweb";
-  text-shadow: 1px 1px 1px #ffffff;
-  font-size: 18px;
-  text-transform: uppercase;
-
-
-
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
-section {
-  position: relative;
-  width: inherit;
-  padding-left: 75px;
-  padding-top: 150px;
-
-}
-
-span {
-  color: #578c24;
-}
-
-article p {
-  float:left;
-  position: relative;
-  background: #353b30;
-  color: white;
-  font-family: "jaf-facitweb";
-  font-weight: 200;
-  margin-bottom: 30px;
-
-
-}
-
-ul{
-  margin-left: 2px;
-  position: relative;
-  float: right;
-  display: inline-block;
-  height: 55px;
-  margin-top: -60px;
-  list-style-image: none;
-  list-style-position: outside;
-  list-style-type: none;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 0px;
-  text-align: left;
-  text-transform: uppercase;
-  width: 520px;
-  font-weight: 400;
-  font-family: "jaf-facitweb";
-  text-shadow: 1px 1px 1px #ffffff;
-  font-size: 14px;
-  text-transform: uppercase;
-  right: 60px;
-  color: #2f2f2f;
-}
-
-li {
-  margin-left: 50px;
-  position: relative;
-  float: right;
-  display: inline-block;
-  height: 55px;
-  list-style-image: none;
-  list-style-position: outside;
-  list-style-type: none;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 0px;
-  text-align: left;
-  text-transform: uppercase;
-  width: 120px;
-  font-weight: 400;
-  font-family: "jaf-facitweb";
-  text-shadow: 1px 1px 1px #ffffff;
-  font-size: 14px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #2f2f2f;
-  padding-top: 20px;
-
-}
-li:hover {
-  background: white;
-  box-shadow: inset 1px 1px 3px #CCC;
-  color: #333333;
-  cursor: default;
-}
-
-a {
-  color: #989898;
-  text-decoration: none;
-  width:100%;
-  height: 100%;
-
-}
-a:hover {
-  color: #333333;
-  text-decoration: none;
-  cursor: default;
-}
-
-
-
-.display {
-  display: inline;
-}
-.nav-content {
-  width: 1100px;
-  height: 100%;
-  position: relative;
-  margin: 0 auto 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+hr {
   display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
 
 
-.logo {
-  position:absolute;
-  height: 60px;
-  width:400px;
-  background: url(../images/logo.png) no-repeat;
-  background-size: contain;
-  left: 50%;
-  margin-left:-200px;
-  top: 60px;
+
+
+body {
+  font: 16px/26px "jaf-facitweb", Helvetica, Arial;
 }
 
-.caption {
+.wrapper {
+  width: 90%;
+  margin: 0 5%;
+}
+
+
+.header-container {
+
   font-family: "jaf-facitweb";
-  font-weight: 200;
-  font-size: 12px;
-  width: 600px;
-
-  color: #F2F2F2;
-  margin: 130px auto 0 auto;
-
-}
-
-.button {
-  position:absolute;
-  height: 30px;
-  width:170px;
-  left: 50%;
-  margin-left:-85px;
-  bottom: 50px;
-  color: #578c24;
-  font-family: "jaf-facitweb";
-  font-weight: 600;
-  font-size: 20px;
-  letter-spacing:2px;
-  text-align: center;
-  background-color: #343b2f;
-  border-radius:6px;
-  padding-top:10px;
-  box-shadow: inset 0px 1px 3px #13140d;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-
-
-}
-
-.button:hover {
-  background-color: #434a3e;
-  box-shadow: 0px 1px 3px #24251f;
-  color: #578c24;
-  text-decoration: none;
-  cursor: default;
-
-}
-
-.button:active {
-  background-color: #343b2f;
-  box-shadow: inset 0px 1px 1px #13140d;
-  color: #578c24;
-  text-decoration: none;
-  cursor: default;
-
-}
-
-
-
-.content {
+  text-shadow: 1px 1px 1px #ffffff;
+  position: fixed;
   width:100%;
-  height: 100%;
-  position:absolute;
-  margin: 10px auto 0 auto;
-  background-color: #F2F2F2;
-  bottom: 0;
+
 }
 
-.beverly {
-  position: absolute;
-  width: 110px;
-  height: 110px;
-  background-image: url(../images/beverlyhillsbadge.gif);
-  background-size: contain;
-  float: left;
-  top: 250px;
-  margin: 0 0 0 40px;
+.footer-container {
+  background: rgb(221, 221, 217);
+
+
 }
 
-.new-york {
-  position: absolute;
-  width: 110px;
-  height: 110px;
-  background-image: url(../images/nybadge.gif);
-  background-size: contain;
-  right:0;
-  top: 250px;
-  margin: 0 40px 0 0;
+.header-container{
+  background: rgba(221, 221, 217, 0.8);
+  visibility: hidden;
+
 }
 
-
-
-.home-page {
-  width: inherit;
-  height: 800px;
-  position: relative;
-  background-color:#fdfffe;
+.title {
+  color: #181818;
+  top: 10px;
+  font-size: 20px;
+  text-align: center center;
+  margin-top: 15px;
 }
 
-.mission-statement {
-  height: 300px;
-  width: 600px;
-  left: 50%;
-  margin-left: -300px;
-  position: absolute;
-  /*background: blue;*/
-  bottom:12%;
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+nav ul {
+  margin: 0;
+  padding: 0;
 }
 
-.mission-text {
-  font-family: "jaf-facitweb";
-  font-weight: 600;
-  font-size: 33px;
-  height: 100%;
-  line-height: 1.3;
+nav a {
+  display: block;
+  margin-bottom: 10px;
+  padding: 15px 0;
+
   text-align: center;
+  text-decoration: none;
+  font-weight: bold;
 
+
+  background: #e6e6e6;
+  box-shadow: inset 1px 1px 3px #CCC;
+  color: #101010;
 }
 
-.attorney-page {
-  width: inherit;
-  height: 1700px;
-  position: relative;
-  background-color:#41473d;
-  z-index: 2;
+nav a:hover,
+nav a:visited {
+  color: #101010;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+.main {
+  padding: 30px 0;
+}
 
 
+
+.main article h1 {
+  font-size: 2em;
+}
+
+.main aside {
+  color: white;
+  padding: 0px 5% 10px;
+}
+
+.footer-container footer {
+  color: white;
+  padding: 20px 0;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+  padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.intro-container {
+  width: 100;
+  height:680px;
+  background:#F2F2F2;;
 }
 
 .color-split {
-  position: absolute;
-  height: 100%;
-  width: 960;
-  background-color: #353b30;
-  left: 200px;
-  padding-right: 50px;
-}
-
-
-.name {
-    float: left;
-    color: white;
-    background: #353b30;
-    position: relative;
-    height: 60px;
-}
-
-.bh-icon{
-  float:left;
-  background:url(../images/beverlyhillsbadge.gif);
-  background-size: contain;
-  position: relative;
-  height: 40px;
-  width: 40px;
-  right: 94px;
-  top: 48px;
-}
-
-.ny-icon{
-  float:left;
-  background:url(../images/nybadge.gif);
-  background-size: contain;
-  position: relative;
-  height: 40px;
-  width: 40px;
-  right: 94px;
-  top: 48px;
-}
-
-.work-page {
   width: 100%;
-  height: 900px;
-  background: #F2F2F2;
+  height: 35%;
+  background: #41473d;
 }
 
-.stellar-clearfix{
-  margin: 0 auto 0 auto;
-  width: 600px;
-  height: 600px;
-  position: relative;
-  top:170px;
-}
 
-.circle {
-  width: 200px;
-  position: relative;
-  height: 200px;
-  background: #c3cead;
-  margin: 0 auto 0 auto;
-  border-radius:100%;
-  top: 250px;
-  z-index: 3;
-
-}
-
-.music {
-  position: relative;
-  margin: 0 auto 0 auto;
-  width: 100px;
-  height: 100px;
-  background: url(../images/music.gif) no-repeat;
-  background-size: contain;
-  top: 50px;
-}
-
-.balls {
-  width: 500px;
-  height:310px;
-  position: relative;
-  margin: 0 auto 0 auto;
-  bottom: 160px;
-
-
-}
-
-.ball {
-  width: 30px;
-  height:30px;
-  position: absolute;
-  margin:10px 10px 10px 10px;
-  border-radius: 100%;
-  background: #383d35;
-
-}
-
-.one {
-  width: 35px;
-  height: 35px;
-  bottom: 10px;
-  right: 90px;
-}
-
-.two {
-
- bottom:75px;
-  right: 120px;
-
-}
-
-.three {
-  bottom: 80px;
-  right: 40px;
-  width: 60px;
-  height:60px;
-}
-
-.four {
-  bottom: 30px;
-  right: 20px;
-  height: 20px;
-  width: 20px;
-
-}
-
-.five {
-  bottom: 20px;
-  left: 20px;
-  height: 70px;
-  width: 70px;
-
-}
-
-.six {
-  bottom: -40px;
-  left: 80px;
-  height: 30px;
-  width: 30px;
-
-}
-
-.seven {
-  bottom: -20px;
-  left: 30px;
-  height: 15px;
-  width: 15px;
-
-}
-
-.eight {
-  top: 150px;
-  left: 130px;
-  height: 40px;
-  width: 40px;
-}
-
-.nine {
-
-  top: 150px;
-  left: 80px;
-  height: 10px;
-  width: 10px;
-
-}
-
-.ten {
-  top: 100px;
-  left: 230px;
-  height: 60px;
-  width: 60px;
-}
-
-.eleven {
-  height: 20px;
-  width: 20px;
-  top: 100px;
-  left: 170px
-}
-
-.work-article {
-  position: relative;
-  background: blue;
-  width: 1000px;
-  height: 200px;
-  margin: 0 auto 0 auto;
-  top: 70px;
-
-
-}
 
 .slideRight{
   animation-name: slideRight;
@@ -571,9 +255,272 @@ a:hover {
   -webkit-animation-duration:.5s;
   -moz-animation-duration:.5s;
   animation-duration:.5s;
+
 }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+  nav a {
+    float: left;
+    width: 27%;
+    margin: 0 1.7%;
+    padding: 25px 2%;
+    margin-bottom: 0;
+  }
+
+  nav li:first-child a {
+    margin-left: 0;
+  }
+
+  nav li:last-child a {
+    margin-right: 0;
+  }
+
+/* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+  nav ul li {
+    display: inline;
+  }
+
+  .oldie nav a {
+    margin: 0 0.7%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+  .header-container {
+    -webkit-box-shadow: 0 5px 10px #aaa;
+    -moz-box-shadow: 0 5px 10px #aaa;
+    box-shadow: 0 5px 10px #aaa;
+    z-index: 1;
+  }
+
+/* ============
+    WIDE: Menu
+   ============ */
+
+  .title {
+    float: left;
+  }
+
+  nav {
+    float: right;
+    width: 38%;
+  }
+
+/* ============
+    WIDE: Main
+   ============ */
+
+  .main article {
+    float: left;
+    width: 57%;
+  }
+
+  .main article {
+    margin-left: 200px;
+    margin-top: 60px;
+  }
+
+
+  .bh-icon{
+    float:left;
+    background:url(../images/beverlyhillsbadge.gif);
+    background-size: contain;
+    position: relative;
+    height: 50px;
+    width: 50px;
+
+    top: -5px;
+
+  }
+
+  .ny-icon{
+    float:left;
+    background:url(../images/nybadge.gif);
+    background-size: contain;
+    position: relative;
+    height: 50px;
+    width: 50px;
+
+    top: -5px;
+  }
+
+
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+  .wrapper {
+    width: 1026px; /* 1140px - 10% for margins */
+    margin: 0 auto;
+  }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+/*
+ * Don't show links for images, or javascript/internal links
+ */
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group; /* h5bp.com/t */
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
 
 

@@ -23,13 +23,14 @@ require(['app', 'jquery', 'stellar', 'bootstrap'], function (app, $) {
 
         var top = $(document).scrollTop();
 
-        if (top > 750) {
-            $('nav').removeClass('fadeOut');
-            $('nav').addClass('slideRight', 2000);
+        if (top > 650) {
+            $('.header-container').removeClass('fadeOut');
+            $('.header-container').addClass('slideRight', 2000);
+
         }
 
         else {
-            $('nav').addClass('fadeOut');
+            $('.header-container').addClass('fadeOut');
 
         }
 
