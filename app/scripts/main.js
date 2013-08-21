@@ -23,7 +23,7 @@ require(['app', 'jquery', 'stellar', 'bootstrap'], function (app, $) {
 
         var top = $(document).scrollTop();
 
-        if (top > 620) {
+        if (top > 600) {
             $('.header-container').removeClass('fadeOut');
             $('.header-container').addClass('slideRight', 2000);
 
@@ -36,11 +36,11 @@ require(['app', 'jquery', 'stellar', 'bootstrap'], function (app, $) {
 
     });
 
-    /*$.stellar({
+   /* $.stellar({
         verticalOffset: -30,
         horizontalOffset: 350
     });
 
     console.log(app);
     console.log('Running jQuery %s', $().jquery);
-}); */
+});
