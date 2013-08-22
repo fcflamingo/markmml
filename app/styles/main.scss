@@ -91,9 +91,18 @@ body {
   background: rgba(221, 221, 217, 0.8);
   visibility: hidden;
   overflow: hidden;
-  height: none;
+  height: 60px;
+  -webkit-transition: height 0.5s linear;
+  -moz-transition: height 0.5s linear;
+  transition: height 0.5s linear;
 
 }
+.header-container:hover{
+
+  height: 250px;
+
+}
+
 
 .title {
   color: #181818;
@@ -209,7 +218,17 @@ article {
 }
 
 .hide-button {
-  float: right;
+  position: absolute;
+  right: 50px;
+  top: 15px;
+  width: 30px;
+  height: 30px;
+  tect-align: center center;
+  font-size: 40px;
+  font-weight: 600;
+  color: #578c24;
+
+  padding-left: 2px;
 }
 
 .intro-container {
@@ -763,6 +782,21 @@ background:   #578c24;
     left: 170px
   }
 
+  .header-container{
+    background: rgba(221, 221, 217, 0.8);
+    visibility: hidden;
+    overflow: hidden;
+    height: 60px;
+    -webkit-transition: height 0.5s linear;
+    -moz-transition: height 0.5s linear;
+    transition: height 0.5s linear;
+
+  }
+  .header-container:hover{
+
+    height: 150px;
+
+  }
 
 
 /* ========================
@@ -895,6 +929,26 @@ background:   #578c24;
     color: #578c24;
     border: 2px solid white;
     background: white;
+  }
+
+  .header-container{
+    background: rgba(221, 221, 217, 0.8);
+    visibility: hidden;
+    overflow: hidden;
+    height: 70px;
+    -webkit-transition: height 0.5s linear;
+    -moz-transition: height 0.5s linear;
+    transition: height 0.5s linear;
+
+  }
+  .header-container:hover{
+
+    height: 70px;
+
+  }
+
+  .hide-button {
+    display: none;
   }
 
 

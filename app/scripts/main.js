@@ -43,6 +43,10 @@ require(['app', 'jquery', 'stellar', 'bootstrap'], function (app, $) {
         horizontalOffset: 350
     });*/
 
+
+
+
+
     console.log(app);
     console.log('Running jQuery %s', $().jquery);
 });
