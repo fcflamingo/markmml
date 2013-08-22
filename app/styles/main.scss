@@ -147,7 +147,7 @@ nav a:hover {
   text-decoration: none;
   background: #e6e6e6;
   box-shadow: inset 1px 1px 3px #CCC;
-  color: #101010;
+  color: #578c24;
 }
 
 /* ==============
@@ -214,7 +214,7 @@ h3 {
 }
 
 article {
-  margin-top: 270px;
+  margin-top: 100px;
 }
 
 .hide-button {
@@ -263,6 +263,46 @@ article {
   position: relative;
   top:140px;
   font-size: 14px;
+
+}
+
+.icon-clearfix {
+  width: 80%;
+  height: 70px;
+  position: absolute;
+  left: 50%;
+  margin-left:-40%;
+  top: 230px;
+}
+
+
+
+.beverly {
+  background-image: url(../images/beverlyhillsbadge.gif) ;
+  float:left;
+
+  height: 80px;
+  width:80px;
+  background-size: contain;
+  margin-bottom: 10px;
+}
+
+.beverly:hover {
+  transform: rotate(50deg);
+}
+
+.new-york {
+  background-image: url(../images/nybadge.gif);
+  float:right;
+
+  height: 80px;
+  width:80px;
+  background-size: contain;
+  margin-bottom: 10px;
+}
+
+.new-york:hover {
+  transform: rotate(50deg);
 }
 
 .mission-statement {
@@ -454,6 +494,8 @@ background:   #578c24;
   border: 2px solid white;
   background: white;
 }
+
+
 
 
 
@@ -798,6 +840,19 @@ background:   #578c24;
 
   }
 
+  .logo {
+
+    width:400px;
+    height: inherit;
+    position: absolute;
+    left:50%;
+
+
+    background: url(../images/logo.png) no-repeat;
+    background-size: contain;
+    margin: 80px auto 0 -200px;
+  }
+
 
 /* ========================
     INTERMEDIATE: IE Fixes
@@ -951,6 +1006,19 @@ background:   #578c24;
     display: none;
   }
 
+  .logo {
+
+    width:400px;
+    height: inherit;
+    position: absolute;
+    left:50%;
+
+
+    background: url(../images/logo.png) no-repeat;
+    background-size: contain;
+    margin: 80px auto 0 -200px;
+  }
+
 
 }
 
@@ -989,6 +1057,10 @@ background:   #578c24;
     background: url(../images/logo.png) no-repeat;
     background-size: contain;
     margin: 80px auto 0 -200px;
+  }
+  .icon-clearfix {
+
+    top: 250px;
   }
 }
 
