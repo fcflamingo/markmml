@@ -36,15 +36,9 @@ require(['app', 'jquery', 'stellar', 'bootstrap'], function (app, $) {
 
     });
 
-    /*if (screen.width < 960) {
-        alert('Less than 960');
-    }
-    else {
 
-        alert('More than 960');
-    }
 
-    $.stellar({
+    /*$.stellar({
         verticalOffset: -30,
         horizontalOffset: 350
     });*/
