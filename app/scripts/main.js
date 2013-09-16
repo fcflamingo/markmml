@@ -25,7 +25,7 @@ require(['app', 'jquery', 'stellar', 'bootstrap'], function (app, $) {
 
         if (top > 600) {
             $('.header-container').removeClass('fadeOut');
-            $('.header-container').addClass('slideRight', 2000);
+            $('.header-container').addClass('slideRight', 1000);
 
         }
 

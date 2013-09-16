@@ -113,6 +113,15 @@ body {
 
 }
 
+.logo-nav {
+  background: url(../images/logo-nav.png) no-repeat;
+  width: 300px;
+  height: 40px;
+  top: 17.5px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
 /* ==============
     MOBILE: Menu
    ============== */
@@ -252,11 +261,26 @@ article {
   height: inherit;
   position: absolute;
   left:50%;
-
-
   background: url(../images/logo.png) no-repeat;
   background-size: contain;
-  margin: 80px auto 0 -150px;
+  margin: 120px auto 0 -150px;
+  ul {
+    list-style: none;
+    margin: 14px auto auto auto;
+    white-space: nowrap;
+    li {
+      display: inline-block;
+      padding: 20px;
+      font-size: 14px;
+      a {
+        color: #578c24;
+        &:hover {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
 }
 
 .caption {
@@ -517,19 +541,19 @@ background:   #578c24;
 
 @keyframes slideRight {
   0% {
-    transform: translateX(-150%);
+    transform: translateY(-150%);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
 }
 
 @-webkit-keyframes slideRight {
   0% {
-    transform: translateX(-150%);
+    transform: translateY(-150%);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
 }
 
@@ -684,7 +708,7 @@ background:   #578c24;
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 500px) {
 
 /* ====================
     INTERMEDIATE: Menu
@@ -819,15 +843,24 @@ background:   #578c24;
 
   .logo {
 
-    width:400px;
+    width:500px;
     height: inherit;
     position: absolute;
     left:50%;
-
-
     background: url(../images/logo.png) no-repeat;
     background-size: contain;
-    margin: 80px auto 0 -200px;
+    margin: 100px auto 0 -250px;
+    ul {
+      margin: 30px auto auto auto;
+      li {
+        padding: 30px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .logo-nav {
+    float: none;
   }
 
 
@@ -844,7 +877,7 @@ background:   #578c24;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 840px) {
 
 /* ====================
     WIDE: CSS3 Effects
@@ -859,6 +892,10 @@ background:   #578c24;
    ============ */
 
   .title {
+    float: left;
+  }
+
+  .logo-nav {
     float: left;
   }
 
@@ -982,15 +1019,16 @@ background:   #578c24;
 
   .logo {
 
-    width:400px;
+    width:800px;
     height: inherit;
     position: absolute;
     left:50%;
-
-
     background: url(../images/logo.png) no-repeat;
     background-size: contain;
-    margin: 80px auto 0 -200px;
+    margin: 100px auto 0 -400px;
+    ul {
+      margin: 50px auto auto auto;
+    }
   }
 
 
@@ -1022,15 +1060,13 @@ background:   #578c24;
 
   .logo {
 
-    width:400px;
+    width:800px;
     height: inherit;
     position: absolute;
     left:50%;
-
-
     background: url(../images/logo.png) no-repeat;
     background-size: contain;
-    margin: 80px auto 0 -200px;
+    margin: 100px auto 0 -400px;
   }
   .icon-clearfix {
 
