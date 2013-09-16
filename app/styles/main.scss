@@ -92,9 +92,9 @@ body {
   visibility: hidden;
   overflow: hidden;
   height: 60px;
-  -webkit-transition: height 0.5s linear;
-  -moz-transition: height 0.5s linear;
-  transition: height 0.5s linear;
+  -webkit-transition: height 0.25s linear;
+  -moz-transition: height 0.25s linear;
+  transition: height 0.25s linear;
 
 }
 .header-container:hover{
@@ -109,7 +109,7 @@ body {
   top: 10px;
   font-size: 20px;
   text-align: center center;
-  margin-top: 15px;
+  margin-top: 10px;
 
 }
 
@@ -120,6 +120,7 @@ body {
 nav ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 nav a {
@@ -219,8 +220,8 @@ article {
 
 .hide-button {
   position: absolute;
-  right: 50px;
-  top: 15px;
+  right: 15px;
+  top: 12.5px;
   width: 30px;
   height: 30px;
   tect-align: center center;
@@ -693,7 +694,7 @@ background:   #578c24;
     float: left;
     width: 27%;
     margin: 0 1.7%;
-    padding: 25px 2%;
+    padding: 20px 2%;
     margin-bottom: 0;
   }
 
@@ -801,13 +802,13 @@ background:   #578c24;
   }
 
   .header-container{
-    background: rgba(221, 221, 217, 0.8);
+    background: rgba(221, 221, 217, 1.0);
     visibility: hidden;
     overflow: hidden;
     height: 60px;
-    -webkit-transition: height 0.5s linear;
-    -moz-transition: height 0.5s linear;
-    transition: height 0.5s linear;
+    -webkit-transition: height 0.25s linear;
+    -moz-transition: height 0.25s linear;
+    transition: height 0.25s linear;
 
   }
   .header-container:hover{
@@ -960,10 +961,10 @@ background:   #578c24;
   }
 
   .header-container{
-    background: rgba(221, 221, 217, 0.8);
+    background: rgba(221, 221, 217, 1.0);
     visibility: hidden;
     overflow: hidden;
-    height: 70px;
+    height: 60px;
     -webkit-transition: height 0.5s linear;
     -moz-transition: height 0.5s linear;
     transition: height 0.5s linear;
@@ -971,7 +972,7 @@ background:   #578c24;
   }
   .header-container:hover{
 
-    height: 70px;
+    height: 60px;
 
   }
 
