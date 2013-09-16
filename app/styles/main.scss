@@ -88,7 +88,7 @@ body {
 }
 
 .header-container{
-  background: rgba(221, 221, 217, 0.8);
+  background: rgba(221, 221, 217, 1.0);
   visibility: hidden;
   overflow: hidden;
   height: 60px;
@@ -505,8 +505,8 @@ background:   #578c24;
   animation-name: slideRight;
   -webkit-animation-name: slideRight;
 
-  animation-duration: 1s;
-  -webkit-animation-duration: 1s;
+  animation-duration: 0.35s;
+  -webkit-animation-duration: 0.35s;
 
   animation-timing-function: ease-in-out;
   -webkit-animation-timing-function: ease-in-out;
@@ -518,18 +518,6 @@ background:   #578c24;
   0% {
     transform: translateX(-150%);
   }
-  50%{
-    transform: translateX(4%);
-  }
-  65%{
-    transform: translateX(-2%);
-  }
-  80%{
-    transform: translateX(2%);
-  }
-  95%{
-    transform: translateX(0%);
-  }
   100% {
     transform: translateX(0%);
   }
@@ -538,18 +526,6 @@ background:   #578c24;
 @-webkit-keyframes slideRight {
   0% {
     transform: translateX(-150%);
-  }
-  50%{
-    transform: translateX(4%);
-  }
-  65%{
-    transform: translateX(-2%);
-  }
-  80%{
-    transform: translateX(2%);
-  }
-  95%{
-    transform: translateX(0%);
   }
   100% {
     transform: translateX(0%);
@@ -874,9 +850,6 @@ background:   #578c24;
    ==================== */
 
   .header-container {
-    -webkit-box-shadow: 0 5px 10px #aaa;
-    -moz-box-shadow: 0 5px 10px #aaa;
-    box-shadow: 0 5px 10px #aaa;
     z-index: 1;
   }
 
