@@ -13,7 +13,9 @@ textarea {
 
 a {
   text-decoration: none;
-  color: inherit;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 body {
@@ -242,8 +244,8 @@ article {
   font-size: 40px;
   font-weight: 600;
   color: #578c24;
-
   padding-left: 2px;
+  cursor: pointer;
 }
 
 .intro-container {
@@ -325,10 +327,16 @@ article {
   font-size: 26px;
   border: 4px solid #fff;
   transition: all .1s linear;
-}
-
-.beverly:hover {
-  transform: rotate(50deg);
+  &:hover {
+    transform: rotate(50deg);
+    box-shadow: 3px 3px 0px #6e7464;
+    margin-top: -3px;
+  }
+  &:active {
+    transform: rotate(0deg);
+    margin-top: auto;
+    box-shadow: none;
+  }
 }
 
 .new-york {
@@ -343,10 +351,16 @@ article {
   font-size: 26px;
   border: 4px solid #fff;
   transition: all .1s linear;
-}
-
-.new-york:hover {
-  transform: rotate(-50deg);
+  &:hover {
+    transform: rotate(50deg);
+    -webkit-box-shadow: 3px 3px 0px #6e7464;
+    margin-top: -3px;
+  }
+  &:active {
+    transform: rotate(0deg);
+    margin-top: auto;
+    box-shadow: none;
+  }
 }
 
 .mission-statement {
@@ -934,39 +948,54 @@ background:   #578c24;
   .main article {
     margin-left: 200px;
     margin-top: 60px;
+    .icon-small {
+      background: #9aa18c;
+      float:left;
+      position: relative;
+      top: 12px;
+      border-radius: 50%;
+      height: 36px;
+      width:36px;
+      line-height: 36px;
+      color: #e8e9e4;
+      font-size: 16px;
+      transition: all .1s linear;
+      text-align: center;
+      margin-right: 10px;
+      &.bh-icon{
+        &:hover {
+          transform: rotate(50deg);
+          -webkit-box-shadow: 2px 2px 0px #6e7464;
+          margin-top: -2px;
+        }
+        &:active {
+          transform: rotate(0deg);
+          margin-top: auto;
+          box-shadow: none;
+        }
+        &:before {
+          content: "BH";
+        }
+      }
+      &.ny-icon{
+        &:hover {
+          transform: rotate(50deg);
+          -webkit-box-shadow: 2px 2px 0px #5f6456;
+          margin-top: -2px;
+        }
+        &:active {
+          transform: rotate(0deg);
+          margin-top: auto;
+          box-shadow: none;
+        }
+        &:before {
+          content: "NY";
+        }
+      }
+    }
   }
 
-  .icon-small {
-    background: #9aa18c;
-    float:left;
-    position: relative;
-    top: 12px;
-    border-radius: 50%;
-    height: 36px;
-    width:36px;
-    line-height: 36px;
-    color: #e8e9e4;
-    font-size: 16px;
-    transition: all .1s linear;
-    text-align: center;
-    margin-right: 10px;
-    &.bh-icon{
-      &:hover {
-        transform: rotate(50deg);
-      }
-      &:before {
-        content: "BH";
-      }
-    }
-    &.ny-icon{
-      &:hover {
-        transform: rotate(-50deg);
-      }
-      &:before {
-        content: "NY";
-      }
-    }
-  }
+
 
 
   .mission-statement {
