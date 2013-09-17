@@ -124,6 +124,11 @@ body {
 
 }
 
+
+
+/* ==============
+    MOBILE: Menu
+   ============== */
 .logo-nav {
   background: url(../images/logo-nav.png) no-repeat;
   width: 300px;
@@ -132,10 +137,6 @@ body {
   position: relative;
   margin-bottom: 20px;
 }
-
-/* ==============
-    MOBILE: Menu
-   ============== */
 
 nav ul {
   margin: 0;
@@ -147,17 +148,11 @@ nav a {
   display: block;
   margin-bottom: 10px;
   padding: 15px 0;
-
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-
-
-
   color: #101010;
 }
-
-
 
 nav a:hover,
 nav a:visited {
@@ -268,11 +263,11 @@ article {
 
 .logo {
   width:300px;
-  height: inherit;
+  height: auto;
   position: absolute;
   left:50%;
   background: url(../images/logo-mobile.png) no-repeat;
-  background-size: contain;
+  background-size: 100%;
   margin: 30px auto 0 -150px;
   ul {
     list-style: none;
@@ -1286,6 +1281,19 @@ article {
   h2,
   h3 {
     page-break-after: avoid;
+  }
+}
+
+
+@media only screen and (max-device-width: 480px) {
+  .logo-nav {
+    background: url(../images/logo-nav.png) no-repeat;
+    background-size: 100%;
+    width: 240px;
+    height: 20px;
+    top: 20px;
+    position: relative;
+    margin-bottom: 20px;
   }
 }
 
