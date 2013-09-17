@@ -92,10 +92,10 @@ body {
 
 .footer-container {
   background: rgb(32, 32, 30);
-  height: 300px;
+  height: auto;
+  min-height: 300px;
   text-align: center;
-
-
+  padding-bottom: 40px;
 }
 
 .header-container{
@@ -524,27 +524,47 @@ article {
 
 
 
-//.button {
-//  color:  #578c24;
-//  font-size: 12px;
-//  border: 2px solid #578c24;
-//  text-align: center;
-//  width: 100px;
-//  position: relative;
-//  padding: 15px 20px 15px 20px;
-//  margin: 10px;
-//  left: 5%;
-//  float: left;
-//  &:hover {
-//    color:  white;
-//    background:   #578c24;
-//    text-decoration: none;
-//  }
-//  &.location  {
-//    color: white;
-//    border: 2px solid white;
-//  }
-//}
+.button {
+  color:  #578c24;
+  border: 2px solid #578c24;
+  text-align: center;
+  width: 120px;
+  position: relative;
+  padding: 15px 20px 15px 20px;
+  margin: 10px;
+  font-size: 20px;
+  top: 20px;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  left:0px;
+  overflow: hidden;
+  height: auto;
+  &.location  {
+    color: white;
+    border: 2px solid white;
+    span {
+      font-size: 14px;
+      position: relative;
+      top: 10px;
+      color: #333;
+      display: none;
+    }
+    &:hover  {
+      color: #578c24;
+      border: 2px solid white;
+      background: white;
+      span {
+        display: block;
+      }
+    }
+  }
+  &:hover {
+    color: white;
+    background: #578c24;
+    text-decoration: none;
+  }
+}
 
 
 
@@ -893,6 +913,47 @@ article {
     float: none;
   }
 
+  .button {
+    color:  #578c24;
+    border: 2px solid #578c24;
+    text-align: center;
+    width: 120px;
+    position: relative;
+    padding: 15px 20px 15px 20px;
+    margin: 10px;
+    font-size: 20px;
+    top: 20px;
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    left:0px;
+    overflow: hidden;
+    height: auto;
+    &.location  {
+      color: white;
+      border: 2px solid white;
+      span {
+        font-size: 14px;
+        position: relative;
+        top: 10px;
+        color: #333;
+        display: none;
+      }
+      &:hover  {
+        color: #578c24;
+        border: 2px solid white;
+        background: white;
+        span {
+          display: block;
+        }
+      }
+    }
+    &:hover {
+      color: white;
+      background: #578c24;
+      text-decoration: none;
+    }
+  }
 
 /* ========================
     INTERMEDIATE: IE Fixes
@@ -1004,63 +1065,6 @@ article {
     margin-top: 120px;
 
   }
-
-
-  .footer-container {
-    background: rgb(32, 32, 30);
-    height: 300px;
-    text-align: center;
-
-
-
-
-
-
-  }
-
-  .button {
-    color:  #578c24;
-    border: 2px solid #578c24;
-    text-align: center;
-    width: 120px;
-    position: relative;
-    padding: 15px 20px 15px 20px;
-    margin: 10px;
-    font-size: 20px;
-    top: 20px;
-    display: inline-block;
-    vertical-align: top;
-    white-space: nowrap;
-    left:0px;
-    overflow: hidden;
-    height: auto;
-    &.location  {
-      color: white;
-      border: 2px solid white;
-      span {
-        font-size: 14px;
-        position: relative;
-        top: 10px;
-        color: #333;
-        display: none;
-      }
-      &:hover  {
-        color: #578c24;
-        border: 2px solid white;
-        background: white;
-        span {
-          display: block;
-        }
-      }
-    }
-    &:hover {
-      color: white;
-      background: #578c24;
-      text-decoration: none;
-    }
-  }
-
-
 
   .header-container{
     background: rgba(221, 221, 217, 1.0);
