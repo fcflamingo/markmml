@@ -11,6 +11,11 @@ textarea {
   color: #222;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
   font-size: 1em;
   line-height: 1.4;
@@ -298,18 +303,28 @@ article {
   left: 50%;
   margin-left:-40%;
   top: 230px;
+  &:hover {
+    a {
+      color: #e8e9e4;
+      text-decoration: none;
+    }
+  }
 }
 
 
 
 .beverly {
-  background-image: url(../images/beverlyhillsbadge.gif) ;
+  background: #9aa18c;
+  border-radius: 50%;
   float:left;
-
-  height: 80px;
-  width:80px;
-  background-size: contain;
+  height: 60px;
+  width:60px;
   margin-bottom: 10px;
+  line-height: 60px;
+  color: #e8e9e4;
+  font-size: 26px;
+  border: 4px solid #fff;
+  transition: all .1s linear;
 }
 
 .beverly:hover {
@@ -317,17 +332,21 @@ article {
 }
 
 .new-york {
-  background-image: url(../images/nybadge.gif);
+  background: #9aa18c;
+  border-radius: 50%;
   float:right;
-
-  height: 80px;
-  width:80px;
-  background-size: contain;
+  height: 60px;
+  width:60px;
   margin-bottom: 10px;
+  line-height: 60px;
+  color: #e8e9e4;
+  font-size: 26px;
+  border: 4px solid #fff;
+  transition: all .1s linear;
 }
 
 .new-york:hover {
-  transform: rotate(50deg);
+  transform: rotate(-50deg);
 }
 
 .mission-statement {
@@ -853,7 +872,6 @@ background:   #578c24;
     ul {
       margin: 30px auto auto auto;
       li {
-        padding: 30px;
         font-size: 20px;
       }
     }
@@ -918,29 +936,38 @@ background:   #578c24;
     margin-top: 60px;
   }
 
-
-  .bh-icon{
+  .icon-small {
+    background: #9aa18c;
     float:left;
-    background:url(../images/beverlyhillsbadge.gif);
-    background-size: contain;
     position: relative;
-    height: 50px;
-    width: 50px;
-
-    top: 5px;
-
+    top: 12px;
+    border-radius: 50%;
+    height: 36px;
+    width:36px;
+    line-height: 36px;
+    color: #e8e9e4;
+    font-size: 16px;
+    transition: all .1s linear;
+    text-align: center;
+    margin-right: 10px;
+    &.bh-icon{
+      &:hover {
+        transform: rotate(50deg);
+      }
+      &:before {
+        content: "BH";
+      }
+    }
+    &.ny-icon{
+      &:hover {
+        transform: rotate(-50deg);
+      }
+      &:before {
+        content: "NY";
+      }
+    }
   }
 
-  .ny-icon{
-    float:left;
-    background:url(../images/nybadge.gif);
-    background-size: contain;
-    position: relative;
-    height: 50px;
-    width: 50px;
-
-    top: 5px;
-  }
 
   .mission-statement {
     text-align: center center;
@@ -1027,7 +1054,11 @@ background:   #578c24;
     background-size: contain;
     margin: 100px auto 0 -400px;
     ul {
-      margin: 50px auto auto auto;
+      margin: 70px auto;
+      border-top: 3px solid #578c24;
+      li {
+        padding: 20px 10%;
+      }
     }
   }
 
