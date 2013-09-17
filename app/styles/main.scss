@@ -549,6 +549,12 @@ article {
       top: 10px;
       color: #333;
       display: none;
+      a {
+        color: #578c24;
+        &:hover {
+          color: #333;
+        }
+      }
     }
     &:hover  {
       color: #578c24;
