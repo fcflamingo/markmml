@@ -11,6 +11,10 @@ textarea {
   color: #222;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
   &:hover {
@@ -520,38 +524,30 @@ article {
 
 
 
-.button {
-  color:  #578c24;
-  font-size: 12px;
-  border: 2px solid #578c24;
-  text-align: center;
-  width: 100px;
-  position: relative;
-  padding: 15px 20px 15px 20px;
-  margin: 10px;
-  left: 5%;
+//.button {
+//  color:  #578c24;
+//  font-size: 12px;
+//  border: 2px solid #578c24;
+//  text-align: center;
+//  width: 100px;
+//  position: relative;
+//  padding: 15px 20px 15px 20px;
+//  margin: 10px;
+//  left: 5%;
+//  float: left;
+//  &:hover {
+//    color:  white;
+//    background:   #578c24;
+//    text-decoration: none;
+//  }
+//  &.location  {
+//    color: white;
+//    border: 2px solid white;
+//  }
+//}
 
-  float: left;
 
-}
 
-.button:hover {
-  color:  white;
-background:   #578c24;
-  text-decoration: none;
-
-}
-
-.location  {
- color: white;
- border: 2px solid white;
-}
-
-.location:hover  {
-  color: #578c24;
-  border: 2px solid white;
-  background: white;
-}
 
 
 
@@ -1026,34 +1022,45 @@ background:   #578c24;
     color:  #578c24;
     border: 2px solid #578c24;
     text-align: center;
-    width: 100px;
+    width: 120px;
     position: relative;
     padding: 15px 20px 15px 20px;
     margin: 10px;
     font-size: 20px;
     top: 20px;
-    float: center;
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
     left:0px;
-
+    overflow: hidden;
+    height: auto;
+    &.location  {
+      color: white;
+      border: 2px solid white;
+      span {
+        font-size: 14px;
+        position: relative;
+        top: 10px;
+        color: #333;
+        display: none;
+      }
+      &:hover  {
+        color: #578c24;
+        border: 2px solid white;
+        background: white;
+        span {
+          display: block;
+        }
+      }
+    }
+    &:hover {
+      color: white;
+      background: #578c24;
+      text-decoration: none;
+    }
   }
 
-  .button:hover {
-    color:  white;
-    background:   #578c24;
-    text-decoration: none;
 
-  }
-
-  .location  {
-    color: white;
-    border: 2px solid white;
-  }
-
-  .location:hover  {
-    color: #578c24;
-    border: 2px solid white;
-    background: white;
-  }
 
   .header-container{
     background: rgba(221, 221, 217, 1.0);
