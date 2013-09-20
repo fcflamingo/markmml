@@ -3,6 +3,18 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
 @import 'sass-bootstrap/lib/bootstrap';
 
+
+// mixins //
+
+@mixin box-shadow($size1, $size2, $size3, $color) {
+  -moz-box-shadow: ($size1) ($size2) ($size3) ($color);
+  -webkit-box-shadow: ($size1) ($size2) ($size3) ($color);
+  box-shadow: ($size1) ($size2) ($size3) ($color);
+}
+
+// end mixins //
+
+
 html,
 button,
 input,
@@ -328,7 +340,7 @@ article {
   transition: all .1s linear;
   &:hover {
     transform: rotate(50deg);
-    box-shadow: 3px 3px 0px #6e7464;
+    @include box-shadow(3px, 3px, 0px, #6e7464);
     margin-top: -3px;
   }
   &:active {
@@ -352,7 +364,7 @@ article {
   transition: all .1s linear;
   &:hover {
     transform: rotate(50deg);
-    -webkit-box-shadow: 3px 3px 0px #6e7464;
+    @include box-shadow(3px, 3px, 0px, #6e7464);
     margin-top: -3px;
   }
   &:active {
@@ -1025,7 +1037,7 @@ article {
       &.bh-icon{
         &:hover {
           transform: rotate(50deg);
-          -webkit-box-shadow: 2px 2px 0px #6e7464;
+          @include box-shadow(2px, 2px, 0px, #6e7464);
           margin-top: -2px;
         }
         &:active {
@@ -1040,7 +1052,7 @@ article {
       &.ny-icon{
         &:hover {
           transform: rotate(50deg);
-          -webkit-box-shadow: 2px 2px 0px #6e7464;
+          @include box-shadow(2px, 2px, 0px, #6e7464);
           margin-top: -2px;
         }
         &:active {
