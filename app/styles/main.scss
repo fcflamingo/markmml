@@ -12,6 +12,12 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
   box-shadow: ($size1) ($size2) ($size3) ($color);
 }
 
+@mixin transform-rotate($deg) {
+  -moz-transform: rotate($deg);
+  -webkit-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
 // end mixins //
 
 
@@ -339,12 +345,12 @@ article {
   border: 4px solid #fff;
   transition: all .1s linear;
   &:hover {
-    transform: rotate(50deg);
+    @include transform-rotate(50deg);
     @include box-shadow(3px, 3px, 0px, #6e7464);
     margin-top: -3px;
   }
   &:active {
-    transform: rotate(0deg);
+    @include transform-rotate(0deg);
     margin-top: auto;
     box-shadow: none;
   }
@@ -363,12 +369,12 @@ article {
   border: 4px solid #fff;
   transition: all .1s linear;
   &:hover {
-    transform: rotate(50deg);
+    @include transform-rotate(50deg);
     @include box-shadow(3px, 3px, 0px, #6e7464);
     margin-top: -3px;
   }
   &:active {
-    transform: rotate(0deg);
+    @include transform-rotate(0deg);
     margin-top: auto;
     box-shadow: none;
   }
@@ -1036,12 +1042,12 @@ article {
       margin-right: 10px;
       &.bh-icon{
         &:hover {
-          transform: rotate(50deg);
+          @include transform-rotate(50deg);
           @include box-shadow(2px, 2px, 0px, #6e7464);
           margin-top: -2px;
         }
         &:active {
-          transform: rotate(0deg);
+          @include transform-rotate(0deg);
           margin-top: auto;
           box-shadow: none;
         }
@@ -1051,12 +1057,12 @@ article {
       }
       &.ny-icon{
         &:hover {
-          transform: rotate(50deg);
+          @include transform-rotate(50deg);
           @include box-shadow(2px, 2px, 0px, #6e7464);
           margin-top: -2px;
         }
         &:active {
-          transform: rotate(0deg);
+          @include transform-rotate(0deg);
           margin-top: auto;
           box-shadow: none;
         }
