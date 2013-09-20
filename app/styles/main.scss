@@ -11,6 +11,17 @@ textarea {
   color: #222;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 body {
   font-size: 1em;
   line-height: 1.4;
@@ -81,20 +92,20 @@ body {
 
 .footer-container {
   background: rgb(32, 32, 30);
-  height: 300px;
+  height: auto;
+  min-height: 300px;
   text-align: center;
-
-
+  padding-bottom: 40px;
 }
 
 .header-container{
-  background: rgba(221, 221, 217, 0.8);
+  background: rgba(221, 221, 217, 1.0);
   visibility: hidden;
   overflow: hidden;
   height: 60px;
-  -webkit-transition: height 0.5s linear;
-  -moz-transition: height 0.5s linear;
-  transition: height 0.5s linear;
+  -webkit-transition: height 0.25s linear;
+  -moz-transition: height 0.25s linear;
+  transition: height 0.25s linear;
 
 }
 .header-container:hover{
@@ -109,34 +120,39 @@ body {
   top: 10px;
   font-size: 20px;
   text-align: center center;
-  margin-top: 15px;
+  margin-top: 10px;
 
 }
+
+
 
 /* ==============
     MOBILE: Menu
    ============== */
+.logo-nav {
+  background: url(../images/logo-nav.png) no-repeat;
+  width: 300px;
+  height: 40px;
+  top: 17.5px;
+  position: relative;
+  margin-bottom: 20px;
+}
 
 nav ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 nav a {
   display: block;
   margin-bottom: 10px;
   padding: 15px 0;
-
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-
-
-
   color: #101010;
 }
-
-
 
 nav a:hover,
 nav a:visited {
@@ -219,16 +235,16 @@ article {
 
 .hide-button {
   position: absolute;
-  right: 50px;
-  top: 15px;
+  right: 15px;
+  top: 12.5px;
   width: 30px;
   height: 30px;
   tect-align: center center;
   font-size: 40px;
   font-weight: 600;
   color: #578c24;
-
   padding-left: 2px;
+  cursor: pointer;
 }
 
 .intro-container {
@@ -246,16 +262,31 @@ article {
 }
 
 .logo {
-
   width:300px;
-  height: inherit;
+  height: auto;
   position: absolute;
   left:50%;
-
-
-  background: url(../images/logo.png) no-repeat;
-  background-size: contain;
-  margin: 80px auto 0 -150px;
+  background: url(../images/logo-mobile.png) no-repeat;
+  background-size: 100%;
+  margin: 30px auto 0 -150px;
+  ul {
+    list-style: none;
+    margin: 150px auto auto auto;
+    white-space: nowrap;
+    border-top: 2px solid #578c24;
+    li {
+      display: inline-block;
+      padding: 10px 7%;
+      font-size: 14px;
+      a {
+        color: #578c24;
+        &:hover {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
 }
 
 .caption {
@@ -273,36 +304,62 @@ article {
   left: 50%;
   margin-left:-40%;
   top: 230px;
+  &:hover {
+    a {
+      color: #e8e9e4;
+      text-decoration: none;
+    }
+  }
 }
 
 
 
 .beverly {
-  background-image: url(../images/beverlyhillsbadge.gif) ;
+  background: #9aa18c;
+  border-radius: 50%;
   float:left;
-
-  height: 80px;
-  width:80px;
-  background-size: contain;
+  height: 60px;
+  width:60px;
   margin-bottom: 10px;
-}
-
-.beverly:hover {
-  transform: rotate(50deg);
+  line-height: 60px;
+  color: #e8e9e4;
+  font-size: 26px;
+  border: 4px solid #fff;
+  transition: all .1s linear;
+  &:hover {
+    transform: rotate(50deg);
+    box-shadow: 3px 3px 0px #6e7464;
+    margin-top: -3px;
+  }
+  &:active {
+    transform: rotate(0deg);
+    margin-top: auto;
+    box-shadow: none;
+  }
 }
 
 .new-york {
-  background-image: url(../images/nybadge.gif);
+  background: #9aa18c;
+  border-radius: 50%;
   float:right;
-
-  height: 80px;
-  width:80px;
-  background-size: contain;
+  height: 60px;
+  width:60px;
   margin-bottom: 10px;
-}
-
-.new-york:hover {
-  transform: rotate(50deg);
+  line-height: 60px;
+  color: #e8e9e4;
+  font-size: 26px;
+  border: 4px solid #fff;
+  transition: all .1s linear;
+  &:hover {
+    transform: rotate(50deg);
+    -webkit-box-shadow: 3px 3px 0px #6e7464;
+    margin-top: -3px;
+  }
+  &:active {
+    transform: rotate(0deg);
+    margin-top: auto;
+    box-shadow: none;
+  }
 }
 
 .mission-statement {
@@ -464,36 +521,54 @@ article {
 
 .button {
   color:  #578c24;
-  font-size: 12px;
   border: 2px solid #578c24;
   text-align: center;
-  width: 100px;
+  width: 120px;
   position: relative;
   padding: 15px 20px 15px 20px;
   margin: 10px;
-  left: 5%;
-
-  float: left;
-
+  font-size: 20px;
+  top: 20px;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  left:0px;
+  overflow: hidden;
+  height: auto;
+  &.location  {
+    color: white;
+    border: 2px solid white;
+    span {
+      font-size: 14px;
+      position: relative;
+      top: 10px;
+      color: #333;
+      display: none;
+      a {
+        color: #578c24;
+        &:hover {
+          color: #333;
+        }
+      }
+    }
+    &:hover  {
+      color: #578c24;
+      border: 2px solid white;
+      background: white;
+      span {
+        display: block;
+      }
+    }
+  }
+  &:hover {
+    color: white;
+    background: #578c24;
+    text-decoration: none;
+  }
 }
 
-.button:hover {
-  color:  white;
-background:   #578c24;
-  text-decoration: none;
 
-}
 
-.location  {
- color: white;
- border: 2px solid white;
-}
-
-.location:hover  {
-  color: #578c24;
-  border: 2px solid white;
-  background: white;
-}
 
 
 
@@ -505,8 +580,8 @@ background:   #578c24;
   animation-name: slideRight;
   -webkit-animation-name: slideRight;
 
-  animation-duration: 1s;
-  -webkit-animation-duration: 1s;
+  animation-duration: 0.35s;
+  -webkit-animation-duration: 0.35s;
 
   animation-timing-function: ease-in-out;
   -webkit-animation-timing-function: ease-in-out;
@@ -516,43 +591,19 @@ background:   #578c24;
 
 @keyframes slideRight {
   0% {
-    transform: translateX(-150%);
-  }
-  50%{
-    transform: translateX(4%);
-  }
-  65%{
-    transform: translateX(-2%);
-  }
-  80%{
-    transform: translateX(2%);
-  }
-  95%{
-    transform: translateX(0%);
+    transform: translateY(-150%);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
 }
 
 @-webkit-keyframes slideRight {
   0% {
-    transform: translateX(-150%);
-  }
-  50%{
-    transform: translateX(4%);
-  }
-  65%{
-    transform: translateX(-2%);
-  }
-  80%{
-    transform: translateX(2%);
-  }
-  95%{
-    transform: translateX(0%);
+    transform: translateY(-150%);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
 }
 
@@ -707,7 +758,7 @@ background:   #578c24;
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 500px) {
 
 /* ====================
     INTERMEDIATE: Menu
@@ -717,7 +768,7 @@ background:   #578c24;
     float: left;
     width: 27%;
     margin: 0 1.7%;
-    padding: 25px 2%;
+    padding: 20px 2%;
     margin-bottom: 0;
   }
 
@@ -825,13 +876,13 @@ background:   #578c24;
   }
 
   .header-container{
-    background: rgba(221, 221, 217, 0.8);
+    background: rgba(221, 221, 217, 1.0);
     visibility: hidden;
     overflow: hidden;
     height: 60px;
-    -webkit-transition: height 0.5s linear;
-    -moz-transition: height 0.5s linear;
-    transition: height 0.5s linear;
+    -webkit-transition: height 0.25s linear;
+    -moz-transition: height 0.25s linear;
+    transition: height 0.25s linear;
 
   }
   .header-container:hover{
@@ -842,17 +893,68 @@ background:   #578c24;
 
   .logo {
 
-    width:400px;
+    width:500px;
     height: inherit;
     position: absolute;
     left:50%;
-
-
     background: url(../images/logo.png) no-repeat;
     background-size: contain;
-    margin: 80px auto 0 -200px;
+    margin: 100px auto 0 -250px;
+    ul {
+      margin: 40px auto auto auto;
+      border-top: 2px solid #578c24;
+      li {
+        font-size: 16px;
+        padding: 10px 9%;
+      }
+    }
   }
 
+  .logo-nav {
+    float: none;
+  }
+
+  .button {
+    color:  #578c24;
+    border: 2px solid #578c24;
+    text-align: center;
+    width: 120px;
+    position: relative;
+    padding: 15px 20px 15px 20px;
+    margin: 10px;
+    font-size: 20px;
+    top: 20px;
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    left:0px;
+    overflow: hidden;
+    height: auto;
+    &.location  {
+      color: white;
+      border: 2px solid white;
+      span {
+        font-size: 14px;
+        position: relative;
+        top: 10px;
+        color: #333;
+        display: none;
+      }
+      &:hover  {
+        color: #578c24;
+        border: 2px solid white;
+        background: white;
+        span {
+          display: block;
+        }
+      }
+    }
+    &:hover {
+      color: white;
+      background: #578c24;
+      text-decoration: none;
+    }
+  }
 
 /* ========================
     INTERMEDIATE: IE Fixes
@@ -867,16 +969,13 @@ background:   #578c24;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 840px) {
 
 /* ====================
     WIDE: CSS3 Effects
    ==================== */
 
   .header-container {
-    -webkit-box-shadow: 0 5px 10px #aaa;
-    -moz-box-shadow: 0 5px 10px #aaa;
-    box-shadow: 0 5px 10px #aaa;
     z-index: 1;
   }
 
@@ -885,6 +984,10 @@ background:   #578c24;
    ============ */
 
   .title {
+    float: left;
+  }
+
+  .logo-nav {
     float: left;
   }
 
@@ -905,31 +1008,55 @@ background:   #578c24;
   .main article {
     margin-left: 200px;
     margin-top: 60px;
+    .icon-small {
+      background: #9aa18c;
+      float:left;
+      position: relative;
+      top: 12px;
+      border-radius: 50%;
+      height: 36px;
+      width:36px;
+      line-height: 36px;
+      color: #e8e9e4;
+      font-size: 16px;
+      transition: all .1s linear;
+      text-align: center;
+      margin-right: 10px;
+      &.bh-icon{
+        &:hover {
+          transform: rotate(50deg);
+          -webkit-box-shadow: 2px 2px 0px #6e7464;
+          margin-top: -2px;
+        }
+        &:active {
+          transform: rotate(0deg);
+          margin-top: auto;
+          box-shadow: none;
+        }
+        &:before {
+          content: "BH";
+        }
+      }
+      &.ny-icon{
+        &:hover {
+          transform: rotate(50deg);
+          -webkit-box-shadow: 2px 2px 0px #6e7464;
+          margin-top: -2px;
+        }
+        &:active {
+          transform: rotate(0deg);
+          margin-top: auto;
+          box-shadow: none;
+        }
+        &:before {
+          content: "NY";
+        }
+      }
+    }
   }
 
 
-  .bh-icon{
-    float:left;
-    background:url(../images/beverlyhillsbadge.gif);
-    background-size: contain;
-    position: relative;
-    height: 50px;
-    width: 50px;
 
-    top: 5px;
-
-  }
-
-  .ny-icon{
-    float:left;
-    background:url(../images/nybadge.gif);
-    background-size: contain;
-    position: relative;
-    height: 50px;
-    width: 50px;
-
-    top: 5px;
-  }
 
   .mission-statement {
     text-align: center center;
@@ -940,57 +1067,11 @@ background:   #578c24;
 
   }
 
-
-  .footer-container {
-    background: rgb(32, 32, 30);
-    height: 300px;
-    text-align: center;
-
-
-
-
-
-
-  }
-
-  .button {
-    color:  #578c24;
-    border: 2px solid #578c24;
-    text-align: center;
-    width: 100px;
-    position: relative;
-    padding: 15px 20px 15px 20px;
-    margin: 10px;
-    font-size: 20px;
-    top: 20px;
-    float: center;
-    left:0px;
-
-  }
-
-  .button:hover {
-    color:  white;
-    background:   #578c24;
-    text-decoration: none;
-
-  }
-
-  .location  {
-    color: white;
-    border: 2px solid white;
-  }
-
-  .location:hover  {
-    color: #578c24;
-    border: 2px solid white;
-    background: white;
-  }
-
   .header-container{
-    background: rgba(221, 221, 217, 0.8);
+    background: rgba(221, 221, 217, 1.0);
     visibility: hidden;
     overflow: hidden;
-    height: 70px;
+    height: 60px;
     -webkit-transition: height 0.5s linear;
     -moz-transition: height 0.5s linear;
     transition: height 0.5s linear;
@@ -998,7 +1079,7 @@ background:   #578c24;
   }
   .header-container:hover{
 
-    height: 70px;
+    height: 60px;
 
   }
 
@@ -1008,15 +1089,21 @@ background:   #578c24;
 
   .logo {
 
-    width:400px;
+    width:800px;
     height: inherit;
     position: absolute;
     left:50%;
-
-
     background: url(../images/logo.png) no-repeat;
     background-size: contain;
-    margin: 80px auto 0 -200px;
+    margin: 100px auto 0 -400px;
+    ul {
+      margin: 70px auto;
+      border-top: 3px solid #578c24;
+      li {
+        padding: 20px 10%;
+        font-size: 20px;
+      }
+    }
   }
 
 
@@ -1048,15 +1135,13 @@ background:   #578c24;
 
   .logo {
 
-    width:400px;
+    width:800px;
     height: inherit;
     position: absolute;
     left:50%;
-
-
     background: url(../images/logo.png) no-repeat;
     background-size: contain;
-    margin: 80px auto 0 -200px;
+    margin: 100px auto 0 -400px;
   }
   .icon-clearfix {
 
@@ -1196,6 +1281,19 @@ background:   #578c24;
   h2,
   h3 {
     page-break-after: avoid;
+  }
+}
+
+
+@media only screen and (max-device-width: 480px) {
+  .logo-nav {
+    background: url(../images/logo-nav.png) no-repeat;
+    background-size: 100%;
+    width: 240px;
+    height: 20px;
+    top: 20px;
+    position: relative;
+    margin-bottom: 20px;
   }
 }
 
