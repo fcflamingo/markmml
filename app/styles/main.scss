@@ -2,6 +2,9 @@ $iconSpritePath: "../images/glyphicons-halflings.png";
 $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
 @import 'sass-bootstrap/lib/bootstrap';
+@import "http://webfonts.justanotherfoundry.com/Facit/";
+
+
 
 .tooltip {
   white-space: nowrap;
@@ -184,8 +187,66 @@ nav {
    ============== */
 
 .main {
+  h1 {
+    color: #F2F2F2;
+    font-family: "Facitweb-Extralight";
+    text-align: center;
+    top: 30px;
+    position: relative;
+    font-size: 4em;
+    border-bottom: 3px solid #578c24;
+    padding-bottom: 30px;
+    display: block;
+    width: 295px;
+    margin: 0 auto;
+  }
   padding: 30px 0;
   article {
+    .icon-small {
+      background: #9aa18c;
+      float:left;
+      position: relative;
+      top: 12px;
+      @include border-radius(50%);
+      height: 36px;
+      width:36px;
+      line-height: 36px;
+      color: #e8e9e4;
+      font-size: 16px;
+      @include transition(all, .1s, linear);
+      text-align: center;
+      margin-right: 10px;
+      &.bh-icon{
+        &:hover {
+          @include transform-rotate(50deg);
+          @include box-shadow(2px, 2px, 0px, #6e7464);
+          margin-top: -2px;
+        }
+        &:active {
+          @include transform-rotate(0deg);
+          margin-top: auto;
+          box-shadow: none;
+        }
+        &:before {
+          content: "BH";
+        }
+      }
+      &.ny-icon{
+        &:hover {
+          @include transform-rotate(50deg);
+          @include box-shadow(2px, 2px, 0px, #6e7464);
+          margin-top: -2px;
+        }
+        &:active {
+          @include transform-rotate(0deg);
+          margin-top: auto;
+          box-shadow: none;
+        }
+        &:before {
+          content: "NY";
+        }
+      }
+    }
     section {
       @extend header;
       margin-top: 30px;
@@ -713,10 +774,6 @@ article {
     }
   }
 
-  article{
-    margin-top:50px;
-  }
-
   .mission-statement {
     text-align: center center;
     font-size: 22px;
@@ -920,55 +977,9 @@ article {
 
   .main {
     article {
-      float: left;
+      display: block;
       width: 57%;
-      margin-left: 200px;
-      margin-top: 60px;
-      .icon-small {
-        background: #9aa18c;
-        float:left;
-        position: relative;
-        top: 12px;
-        @include border-radius(50%);
-        height: 36px;
-        width:36px;
-        line-height: 36px;
-        color: #e8e9e4;
-        font-size: 16px;
-        @include transition(all, .1s, linear);
-        text-align: center;
-        margin-right: 10px;
-        &.bh-icon{
-          &:hover {
-            @include transform-rotate(50deg);
-            @include box-shadow(2px, 2px, 0px, #6e7464);
-            margin-top: -2px;
-          }
-          &:active {
-            @include transform-rotate(0deg);
-            margin-top: auto;
-            box-shadow: none;
-          }
-          &:before {
-            content: "BH";
-          }
-        }
-        &.ny-icon{
-          &:hover {
-            @include transform-rotate(50deg);
-            @include box-shadow(2px, 2px, 0px, #6e7464);
-            margin-top: -2px;
-          }
-          &:active {
-            @include transform-rotate(0deg);
-            margin-top: auto;
-            box-shadow: none;
-          }
-          &:before {
-            content: "NY";
-          }
-        }
-      }
+      margin: 60px auto;
     }
   }
 
