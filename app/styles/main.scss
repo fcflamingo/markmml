@@ -3,6 +3,10 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
 @import 'sass-bootstrap/lib/bootstrap';
 
+.tooltip {
+  white-space: nowrap;
+}
+
 // mixins //
 
 @mixin box-shadow($top, $left, $blur, $color) {
