@@ -50,6 +50,20 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
         $('[data-toggle=tooltip]').tooltip();
     });
 
+    $("ul li a[href^='#']").on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: $(this.hash).offset().top }, 300);
+
+        // edit: Opera and IE requires the "html" elm. animated
+    });
+
+    $(".logo-nav").on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop: 0}, 300);
+
+        // edit: Opera and IE requires the "html" elm. animated
+    });
+
     console.log(app);
     console.log('Running jQuery %s', $().jquery);
 });

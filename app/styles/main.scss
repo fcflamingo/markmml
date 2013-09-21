@@ -154,6 +154,7 @@ textarea {
   top: 17.5px;
   position: relative;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 nav {
@@ -185,6 +186,11 @@ nav {
 /* ==============
     MOBILE: Main
    ============== */
+
+#attorneys {
+  position: relative;
+  top: -40px;
+}
 
 .main {
   h1 {
