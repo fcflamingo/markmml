@@ -34,9 +34,9 @@
             <div class="hide-button">+</div>
             <nav>
                 <ul>
-                    <li><a href="#">Attorneys</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#attorneys">Attorneys</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -46,14 +46,15 @@
         <div class="color-split">
             <div class="logo">
                 <ul>
-                    <li><a href="#">Attorneys</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#attorneys">Attorneys</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
+
             <div class="icon-clearfix">
-                <a class="beverly icon" href="https://maps.google.com/maps?client=safari&rls=en&q=120+El+Camino,+Suite+104+Beverly+Hills,+CA+90212&oe=UTF-8&um=1&ie=UTF-8&hl=en&sa=N&tab=wl" target="_blank">BH</a>
-                <a class="new-york icon" href="https://maps.google.com/maps?client=safari&rls=en&q=9+St+Marks+Pl,+Manhattan,+New+York,+10003&oe=UTF-8&um=1&ie=UTF-8&hl=en&sa=N&tab=wl" target="_blank">NY</a>
+                <a class="beverly icon" href="https://maps.google.com/maps?client=safari&rls=en&q=120+El+Camino,+Suite+104+Beverly+Hills,+CA+90212&oe=UTF-8&um=1&ie=UTF-8&hl=en&sa=N&tab=wl" target="_blank" data-toggle="tooltip" title="view map of Beverly Hills office">BH</a>
+                <a class="new-york icon" href="https://maps.google.com/maps?client=safari&rls=en&q=9+St+Marks+Pl,+Manhattan,+New+York,+10003&oe=UTF-8&um=1&ie=UTF-8&hl=en&sa=N&tab=wl" target="_blank" data-toggle="tooltip" title="view map of New York office">NY</a>
             </div>
         </div>
         <div class="intro wrapper clearfix">
@@ -68,11 +69,11 @@
 
         </div> <!-- #main -->
     </div> <!-- #intro-container -->
-
+    <div id="attorneys"></div>
     <div class="main-container">
         <div class="main wrapper clearfix">
 
-
+            <h1>attorneys</h1>
 
             <article>
                 <header>
@@ -164,7 +165,7 @@
         </div> <!-- #main -->
     </div> <!-- #main-container -->
 
-    <div class="work-container">
+    <div class="work-container" id="work">
 
         <div class="work wrapper clearfix" >
 
@@ -206,7 +207,7 @@
 
 
 
-    <div class="footer-container">
+    <div class="footer-container" id="contact">
         <footer class="wrapper ">
             <h3>- Contact -</h3>
 
@@ -249,5 +250,7 @@
         <!-- build:js scripts/main.js -->
         <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
         <!-- endbuild -->
+
+
 </body>
 </html>
