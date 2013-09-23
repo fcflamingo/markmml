@@ -2,6 +2,41 @@ $iconSpritePath: "../images/glyphicons-halflings.png";
 $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
 @import 'sass-bootstrap/lib/bootstrap';
+@import "http://webfonts.justanotherfoundry.com/Facit/";
+
+
+
+.tooltip {
+  white-space: nowrap;
+}
+
+// mixins //
+
+@mixin box-shadow($top, $left, $blur, $color) {
+  -moz-box-shadow: ($top) ($left) ($blur) ($color);
+  -webkit-box-shadow: ($top) ($left) ($blur) ($color);
+  box-shadow: ($top) ($left) ($blur) ($color);
+}
+
+@mixin transform-rotate($deg) {
+  -moz-transform: rotate($deg);
+  -webkit-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
+@mixin transition($property, $time, $easing) {
+  -moz-transition: ($property) ($time) ($easing);
+  -webkit-transition: ($property) ($time) ($easing);
+  transition: ($property) ($time) ($easing);
+}
+
+@mixin border-radius($radius) {
+  -moz-border-radius: ($radius);
+  -webkit-border-radius: ($radius);
+  border-radius: ($radius);
+}
+
+// end mixins //
 
 html,
 button,
@@ -25,6 +60,7 @@ a {
 body {
   font-size: 1em;
   line-height: 1.4;
+  font: 16px/26px "jaf-facitweb", Helvetica, Arial;
 }
 
 ::-moz-selection {
@@ -67,27 +103,25 @@ textarea {
   padding: 0.2em 0;
 }
 
-
-
-
-body {
-  font: 16px/26px "jaf-facitweb", Helvetica, Arial;
-}
-
 .wrapper {
   width: 90%;
   margin: 0 5%;
 }
 
-
 .header-container {
-
   font-family: "jaf-facitweb";
   text-shadow: 1px 1px 1px #ffffff;
   position: fixed;
   width:100%;
   z-index:1;
-
+  background: rgba(221, 221, 217, 1.0);
+  visibility: hidden;
+  overflow: hidden;
+  height: 60px;
+  @include transition(height, 0.25s, linear);
+  &:hover {
+    height: 250px;
+  }
 }
 
 .footer-container {
@@ -96,24 +130,11 @@ body {
   min-height: 300px;
   text-align: center;
   padding-bottom: 40px;
+  footer {
+    color: white;
+    padding: 20px 0;
+  }
 }
-
-.header-container{
-  background: rgba(221, 221, 217, 1.0);
-  visibility: hidden;
-  overflow: hidden;
-  height: 60px;
-  -webkit-transition: height 0.25s linear;
-  -moz-transition: height 0.25s linear;
-  transition: height 0.25s linear;
-
-}
-.header-container:hover{
-
-  height: 250px;
-
-}
-
 
 .title {
   color: #181818;
@@ -121,10 +142,7 @@ body {
   font-size: 20px;
   text-align: center center;
   margin-top: 10px;
-
 }
-
-
 
 /* ==============
     MOBILE: Menu
@@ -136,73 +154,123 @@ body {
   top: 17.5px;
   position: relative;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-nav a {
-  display: block;
-  margin-bottom: 10px;
-  padding: 15px 0;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  color: #101010;
-}
-
-nav a:hover,
-nav a:visited {
-  color: #101010;
-}
-
-nav a:hover {
-  text-decoration: none;
-  background: #e6e6e6;
-  box-shadow: inset 1px 1px 3px #CCC;
-  color: #578c24;
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: #101010;
+    &:hover,&:visited {
+      color: #101010;
+    }
+    &:hover {
+      text-decoration: none;
+      background: #e6e6e6;
+      box-shadow: inset 1px 1px 3px #CCC;
+      color: #578c24;
+    }
+  }
 }
 
 /* ==============
     MOBILE: Main
    ============== */
 
+#attorneys {
+  position: relative;
+  top: -40px;
+}
+
 .main {
+  h1 {
+    color: #F2F2F2;
+    font-family: "Facitweb-Extralight";
+    text-align: center;
+    top: 30px;
+    position: relative;
+    font-size: 4em;
+    border-bottom: 3px solid #578c24;
+    padding-bottom: 30px;
+    display: block;
+    width: 295px;
+    margin: 0 auto;
+  }
   padding: 30px 0;
-}
-
-
-
-.main article h1 {
-  font-size: 2em;
-}
-
-.main article section {
-  margin-top:30px;
-  background: #F2F2F2;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.main article header {
-
-  background: #F2F2F2;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.main aside {
-  color: white;
-  padding: 0px 5% 10px;
-}
-
-.footer-container footer {
-  color: white;
-  padding: 20px 0;
-
+  article {
+    margin: 60px auto;
+    .icon-small {
+      background: #9aa18c;
+      float:left;
+      position: relative;
+      top: 12px;
+      @include border-radius(50%);
+      height: 36px;
+      width:36px;
+      line-height: 36px;
+      color: #e8e9e4;
+      font-size: 16px;
+      @include transition(all, .1s, linear);
+      text-align: center;
+      margin-right: 10px;
+      &.bh-icon{
+        &:hover {
+          @include transform-rotate(50deg);
+          @include box-shadow(2px, 2px, 0px, #6e7464);
+          margin-top: -2px;
+        }
+        &:active {
+          @include transform-rotate(0deg);
+          margin-top: auto;
+          box-shadow: none;
+        }
+        &:before {
+          content: "BH";
+        }
+      }
+      &.ny-icon{
+        &:hover {
+          @include transform-rotate(50deg);
+          @include box-shadow(2px, 2px, 0px, #6e7464);
+          margin-top: -2px;
+        }
+        &:active {
+          @include transform-rotate(0deg);
+          margin-top: auto;
+          box-shadow: none;
+        }
+        &:before {
+          content: "NY";
+        }
+      }
+    }
+    section {
+      @extend header;
+      margin-top: 30px;
+    }
+    header {
+      background: #F2F2F2;
+      padding: 10px;
+      @include border-radius(5px);
+    }
+    aside {
+      color: white;
+      padding: 0px 5% 10px;
+    }
+    h1 {
+      font-size: 2em;
+    }
+  }
 }
 
 /* ===============
@@ -258,7 +326,6 @@ article {
   width: 100%;
   height: 40%;
   background: #41473d;
-
 }
 
 .logo {
@@ -304,61 +371,39 @@ article {
   left: 50%;
   margin-left:-40%;
   top: 230px;
+  a {
+    background: #9aa18c;
+    @include border-radius(50%);
+    height: 60px;
+    width:60px;
+    margin-bottom: 10px;
+    line-height: 60px;
+    color: #e8e9e4;
+    font-size: 26px;
+    border: 4px solid #fff;
+    @include transition(all, .1s, linear);
+    &:hover {
+      @include transform-rotate(50deg);
+      @include box-shadow(3px, 3px, 0px, #6e7464);
+      margin-top: -3px;
+    }
+    &:active {
+      @include transform-rotate(0deg);
+      margin-top: auto;
+      box-shadow: none;
+    }
+    &.beverly {
+      float: left;
+    }
+    &.new-york {
+      float: right;
+    }
+  }
   &:hover {
     a {
       color: #e8e9e4;
       text-decoration: none;
     }
-  }
-}
-
-
-
-.beverly {
-  background: #9aa18c;
-  border-radius: 50%;
-  float:left;
-  height: 60px;
-  width:60px;
-  margin-bottom: 10px;
-  line-height: 60px;
-  color: #e8e9e4;
-  font-size: 26px;
-  border: 4px solid #fff;
-  transition: all .1s linear;
-  &:hover {
-    transform: rotate(50deg);
-    box-shadow: 3px 3px 0px #6e7464;
-    margin-top: -3px;
-  }
-  &:active {
-    transform: rotate(0deg);
-    margin-top: auto;
-    box-shadow: none;
-  }
-}
-
-.new-york {
-  background: #9aa18c;
-  border-radius: 50%;
-  float:right;
-  height: 60px;
-  width:60px;
-  margin-bottom: 10px;
-  line-height: 60px;
-  color: #e8e9e4;
-  font-size: 26px;
-  border: 4px solid #fff;
-  transition: all .1s linear;
-  &:hover {
-    transform: rotate(50deg);
-    -webkit-box-shadow: 3px 3px 0px #6e7464;
-    margin-top: -3px;
-  }
-  &:active {
-    transform: rotate(0deg);
-    margin-top: auto;
-    box-shadow: none;
   }
 }
 
@@ -368,7 +413,6 @@ article {
   font-weight: 600;
   margin-top: 120px;
   text-shadow: 1px 1px 1px white;
-
 }
 
 .main-container {
@@ -376,15 +420,10 @@ article {
 }
 
 .work-container {
-
   width: 100%;
   background:#F2F2F2;
   text-align: center;
-
 }
-
-
-
 
 .circle {
   width: 200px;
@@ -392,10 +431,8 @@ article {
   height: 200px;
   background: #c3cead;
   margin: 0 auto 0 auto;
-  border-radius:100%;
+  @include border-radius(100%);
   top: 250px;
-
-
 }
 
 .music {
@@ -403,7 +440,7 @@ article {
   margin: 0 auto 0 auto;
   width: 100px;
   height: 100px;
-  background: url(../images/music.gif) no-repeat;
+  background: url(../images/musicicon.png) no-repeat;
   background-size: contain;
   top: 50px;
 }
@@ -414,8 +451,6 @@ article {
   position: relative;
   margin: 0 auto 0 auto;
   bottom: 160px;
-
-
 }
 
 .ball {
@@ -423,9 +458,8 @@ article {
   height:30px;
   position: absolute;
   margin:10px 10px 10px 10px;
-  border-radius: 100%;
+  @include border-radius(100%);
   background: #383d35;
-
 }
 
 .one {
@@ -514,10 +548,7 @@ article {
 .work-words {
   text-align: left;
   margin: 40px 10px 60px 10px;
-
 }
-
-
 
 .button {
   color:  #578c24;
@@ -567,25 +598,13 @@ article {
   }
 }
 
-
-
-
-
-
-
-
-
-
 .slideRight{
   animation-name: slideRight;
   -webkit-animation-name: slideRight;
-
   animation-duration: 0.35s;
   -webkit-animation-duration: 0.35s;
-
   animation-timing-function: ease-in-out;
   -webkit-animation-timing-function: ease-in-out;
-
   visibility: visible !important;
 }
 
@@ -607,7 +626,6 @@ article {
   }
 }
 
-
 @-webkit-keyframes fadeout { from { opacity:1; } to { opacity:0; } }
 @-moz-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
 @keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
@@ -618,11 +636,9 @@ article {
   -webkit-animation:fadeOut ease-in 1;
   -moz-animation:fadeOut ease-in 1;
   animation:fadeOut ease-in 1;
-
   -webkit-animation-fill-mode:forwards;
   -moz-animation-fill-mode:forwards;
   animation-fill-mode:forwards;
-
   -webkit-animation-duration:.5s;
   -moz-animation-duration:.5s;
   animation-duration:.5s;
@@ -663,7 +679,6 @@ article {
     -webkit-transform: rotate(-4deg);
   }
 }
-
 
 .floating{
   animation-name: floating;
@@ -741,19 +756,6 @@ article {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -763,25 +765,20 @@ article {
 /* ====================
     INTERMEDIATE: Menu
    ==================== */
-
-  nav a {
-    float: left;
-    width: 27%;
-    margin: 0 1.7%;
-    padding: 20px 2%;
-    margin-bottom: 0;
-  }
-
-  nav li:first-child a {
-    margin-left: 0;
-  }
-
-  nav li:last-child a {
-    margin-right: 0;
-  }
-
-  article{
-    margin-top:50px;
+  nav {
+    a {
+      float: left;
+      width: 27%;
+      margin: 0 1.7%;
+      padding: 20px 2%;
+      margin-bottom: 0;
+    }
+    li:first-child a {
+      margin-left: 0;
+    }
+    li:last-child a {
+      margin-right: 0;
+    }
   }
 
   .mission-statement {
@@ -789,7 +786,6 @@ article {
     font-size: 22px;
     font-weight: 600;
     margin-top: 120px;
-
   }
 
   .one {
@@ -800,10 +796,8 @@ article {
   }
 
   .two {
-
     bottom:75px;
     right: 120px;
-
   }
 
   .three {
@@ -818,7 +812,6 @@ article {
     right: 20px;
     height: 20px;
     width: 20px;
-
   }
 
   .five {
@@ -826,7 +819,6 @@ article {
     left: 20px;
     height: 70px;
     width: 70px;
-
   }
 
   .six {
@@ -834,7 +826,6 @@ article {
     left: 80px;
     height: 30px;
     width: 30px;
-
   }
 
   .seven {
@@ -842,7 +833,6 @@ article {
     left: 30px;
     height: 15px;
     width: 15px;
-
   }
 
   .eight {
@@ -853,12 +843,10 @@ article {
   }
 
   .nine {
-
     top: 150px;
     left: 80px;
     height: 10px;
     width: 10px;
-
   }
 
   .ten {
@@ -880,19 +868,13 @@ article {
     visibility: hidden;
     overflow: hidden;
     height: 60px;
-    -webkit-transition: height 0.25s linear;
-    -moz-transition: height 0.25s linear;
-    transition: height 0.25s linear;
-
-  }
-  .header-container:hover{
-
-    height: 150px;
-
+    @include transition(height, 0.25s, linear);
+    &:hover {
+      height: 150px;
+    }
   }
 
   .logo {
-
     width:500px;
     height: inherit;
     position: absolute;
@@ -1000,63 +982,13 @@ article {
     WIDE: Main
    ============ */
 
-  .main article {
-    float: left;
-    width: 57%;
-  }
-
-  .main article {
-    margin-left: 200px;
-    margin-top: 60px;
-    .icon-small {
-      background: #9aa18c;
-      float:left;
-      position: relative;
-      top: 12px;
-      border-radius: 50%;
-      height: 36px;
-      width:36px;
-      line-height: 36px;
-      color: #e8e9e4;
-      font-size: 16px;
-      transition: all .1s linear;
-      text-align: center;
-      margin-right: 10px;
-      &.bh-icon{
-        &:hover {
-          transform: rotate(50deg);
-          -webkit-box-shadow: 2px 2px 0px #6e7464;
-          margin-top: -2px;
-        }
-        &:active {
-          transform: rotate(0deg);
-          margin-top: auto;
-          box-shadow: none;
-        }
-        &:before {
-          content: "BH";
-        }
-      }
-      &.ny-icon{
-        &:hover {
-          transform: rotate(50deg);
-          -webkit-box-shadow: 2px 2px 0px #6e7464;
-          margin-top: -2px;
-        }
-        &:active {
-          transform: rotate(0deg);
-          margin-top: auto;
-          box-shadow: none;
-        }
-        &:before {
-          content: "NY";
-        }
-      }
+  .main {
+    article {
+      display: block;
+      width: 57%;
+      margin: 60px auto;
     }
   }
-
-
-
 
   .mission-statement {
     text-align: center center;
@@ -1064,7 +996,6 @@ article {
     line-height: 1.3;
     font-weight: 600;
     margin-top: 120px;
-
   }
 
   .header-container{
@@ -1072,15 +1003,10 @@ article {
     visibility: hidden;
     overflow: hidden;
     height: 60px;
-    -webkit-transition: height 0.5s linear;
-    -moz-transition: height 0.5s linear;
-    transition: height 0.5s linear;
-
-  }
-  .header-container:hover{
-
-    height: 60px;
-
+    @include transition(height, 0.5s, linear);
+    &:hover {
+      height: 60px;
+    }
   }
 
   .hide-button {
@@ -1088,7 +1014,6 @@ article {
   }
 
   .logo {
-
     width:800px;
     height: inherit;
     position: absolute;
@@ -1105,7 +1030,6 @@ article {
       }
     }
   }
-
 
 }
 
@@ -1134,7 +1058,6 @@ article {
   }
 
   .logo {
-
     width:800px;
     height: inherit;
     position: absolute;
@@ -1143,13 +1066,12 @@ article {
     background-size: contain;
     margin: 100px auto 0 -400px;
   }
-  .icon-clearfix {
 
+  .icon-clearfix {
     top: 250px;
   }
+
 }
-
-
 
 /* ==========================================================================
    Helper classes
@@ -1283,7 +1205,6 @@ article {
     page-break-after: avoid;
   }
 }
-
 
 @media only screen and (max-device-width: 480px) {
   .logo-nav {

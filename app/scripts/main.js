@@ -1,8 +1,9 @@
 require.config({
     paths: {
         jquery: '../bower_components/jquery/jquery',
+        bootstrap: 'vendor/bootstrap',
         stellar: '../bower_components/jquery.stellar/jquery.stellar',
-        bootstrap: 'vendor/bootstrap'
+        tooltip: '../bower_components/sass-bootstrap/js/bootstrap-tooltip'
     },
     shim: {
         bootstrap: {
@@ -12,11 +13,15 @@ require.config({
         stellar: {
             deps: ['jquery'],
             exports: 'jquery'
+        },
+        tooltip: {
+            deps: ['jquery'],
+            exports: 'jquery'
         }
     }
 });
 
-require(['app', 'jquery', 'stellar', 'bootstrap'], function (app, $) {
+require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) {
     'use strict';
 
     $(document).scroll(function() {
@@ -36,17 +41,32 @@ require(['app', 'jquery', 'stellar', 'bootstrap'], function (app, $) {
 
     });
 
-
-
     /*$.stellar({
         verticalOffset: -30,
         horizontalOffset: 350
     });*/
 
+    $(function() {
+        $('[data-toggle=tooltip]').tooltip();
+    });
 
+    $("ul li a[href^='#']").on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: $(this.hash).offset().top }, 300);
 
+        // edit: Opera and IE requires the "html" elm. animated
+    });
 
+    $(".logo-nav").on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop: 0}, 300);
+
+        // edit: Opera and IE requires the "html" elm. animated
+    });
 
     console.log(app);
     console.log('Running jQuery %s', $().jquery);
 });
+
+
+
