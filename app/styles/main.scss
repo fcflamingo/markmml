@@ -427,12 +427,12 @@ article {
 
 .circle {
   width: 200px;
-  position: relative;
+  //position: relative;
   height: 200px;
   background: #c3cead;
   margin: 0 auto 0 auto;
   @include border-radius(100%);
-  top: 250px;
+  top: 200px;
 }
 
 .music {
@@ -445,109 +445,27 @@ article {
   top: 50px;
 }
 
-.balls {
-  width: 500px;
-  height:310px;
-  position: relative;
-  margin: 0 auto 0 auto;
-  bottom: 160px;
+#orbitwrapper {
+  width:900px;
+  height:550px;
+  position:relative;
+  margin: 0 auto;
 }
-
-.ball {
-  width: 30px;
-  height:30px;
-  position: absolute;
-  margin:10px 10px 10px 10px;
-  @include border-radius(100%);
-  background: #383d35;
+#canvas {
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
 }
-
-.one {
-  width: 35px;
-  height: 35px;
-  bottom: 10px;
-  right: 120px;
-}
-
-.two {
-
-  bottom:75px;
-  right: 160px;
-
-}
-
-.three {
-  bottom: 80px;
-  right: 40px;
-  width: 60px;
-  height:60px;
-}
-
-.four {
-  bottom: 30px;
-  right: 20px;
-  height: 20px;
-  width: 20px;
-
-}
-
-.five {
-  bottom: 20px;
-  left: 10px;
-  height: 70px;
-  width: 70px;
-
-}
-
-.six {
-  bottom: -60px;
-  left: 40px;
-  height: 30px;
-  width: 30px;
-
-}
-
-.seven {
-  bottom: -20px;
-  left: 30px;
-  height: 15px;
-  width: 15px;
-
-}
-
-.eight {
-  top: 150px;
-  left: 130px;
-  height: 40px;
-  width: 40px;
-}
-
-.nine {
-
-  top: 150px;
-  left: 80px;
-  height: 10px;
-  width: 10px;
-
-}
-
-.ten {
-  top: 100px;
-  left: 230px;
-  height: 60px;
-  width: 60px;
-}
-
-.eleven {
-  height: 20px;
-  width: 20px;
-  top: 100px;
-  left: 170px
+#pulser{
+  position:relative;
+  z-index:10;
 }
 
 .work-words {
   text-align: left;
-  margin: 40px 10px 60px 10px;
+  margin: 0px 10px 60px 10px;
 }
 
 .button {
@@ -729,30 +647,24 @@ article {
 @keyframes pulse {
   0% {
     transform: scale(0.9);
-    opacity: 0.7;
   }
   50% {
     ransform: scale(1);
-    opacity: 1;
   }
   100% {
     transform: scale(0.9);
-    opacity: 0.7;
   }
 }
 
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scale(0.95);
-    opacity: 0.7;
   }
   50% {
     -webkit-transform: scale(1);
-    opacity: 1;
   }
   100% {
     -webkit-transform: scale(0.95);
-    opacity: 0.7;
   }
 }
 
