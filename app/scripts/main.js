@@ -97,13 +97,14 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip', 'easel', 'preload']
             for(var i = 0; i<numCircles; i++){
                 var temp = new Circle(new createjs.Bitmap(queue.getResult(imgArray[i])));
                 circleContainer.addChild(temp.img);
+                circleContainer.addChild(temp.outline);
                 circleArray[i] = temp;
             }
         }
         function instantiateLines(){
             lineContainer = new createjs.Container();
             lines = new createjs.Shape();
-            lines.alpha = 0.6;
+            lines.alpha = 0.5;
             lineContainer.addChild(lines);
         }
         function addContainers(){
@@ -114,19 +115,25 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip', 'easel', 'preload']
             var dir = Math.round(Math.random()*1);
             if(dir==0){this.direction = -1;}
             if(dir==1){this.direction = 1;}
-            this.img = bmp;
+            //this.img = bmp;
+            var s = new createjs.Shape();
+            s.graphics.beginFill("black");
+            s.graphics.drawCircle(0,0,128-8);
+            s.shadow = new createjs.Shadow("white",0,0,12);
+            this.img = s;
             this.img.scaleX = Math.random()*0.3+0.1;
             this.img.scaleY = this.img.scaleX;
-            this.offset = (this.img.getBounds().width*this.img.scaleX)/2;
+            this.outline = new createjs.Shape();
+            this.outline.graphics.setStrokeStyle(2);
+            this.outline.graphics.beginStroke("#578c24");
+            this.outline.graphics.drawCircle(0,0,125*this.img.scaleX+3);
+            //this.offset = (this.img.getBounds().width*this.img.scaleX)/2;
+            this.offset = 0;
             this.r = Math.random()*120+130;
             var ang = Math.random()*360;
             this.angle = ang;
             var radians = ang * Math.PI/180;
             this.rads = radians;
-            var xo = this.r*Math.cos(radians);
-            var yo = this.r*Math.sin(radians);
-            this.img.x = CENTER_X + xo - this.offset;
-            this.img.y = CENTER_Y + yo - this.offset;
 
             this.speedMultiplier = (.6-this.img.scaleX)*(1-Math.random()*0.7);
         }
@@ -140,23 +147,21 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip', 'easel', 'preload']
                 var yo = temp.r*Math.sin(temp.rads*temp.direction);
                 temp.img.x = CENTER_X + xo - temp.offset;
                 temp.img.y = CENTER_Y + yo - temp.offset;
+                temp.outline.x = temp.img.x + temp.offset;
+                temp.outline.y = temp.img.y + temp.offset;
             }
         }
         function updateLines(){
             lines.graphics.clear();
-            lines.graphics.setStrokeStyle(2).beginStroke("white");
+            lines.graphics.setStrokeStyle(2).beginStroke("#578c24");
             for(var i = 0; i<numCircles; i++){
                 var temp = circleArray[i];
                 lines.graphics.moveTo(temp.img.x+temp.offset, temp.img.y+temp.offset);
                 var temp2 = circleArray[(i+1)%numCircles];
                 lines.graphics.lineTo(temp2.img.x+temp2.offset, temp2.img.y+temp2.offset);
-                //var temp3 = circleArray[(i+2)%numCircles];
-                //lines.graphics.moveTo(temp.img.x+temp.offset, temp.img.y+temp.offset);
-                //lines.graphics.lineTo(temp3.img.x+temp3.offset, temp3.img.y+temp3.offset);
                 lines.graphics.moveTo(temp.img.x+temp.offset, temp.img.y+temp.offset);
-                lines.graphics.lineTo(450,300);
+                lines.graphics.lineTo(450,275);
             }
-            lines.shadow = new createjs.Shadow("#505050",0,0,3);
         }
     });
 
