@@ -3,7 +3,9 @@ require.config({
         jquery: '../bower_components/jquery/jquery',
         bootstrap: 'vendor/bootstrap',
         stellar: '../bower_components/jquery.stellar/jquery.stellar',
-        tooltip: '../bower_components/sass-bootstrap/js/bootstrap-tooltip'
+        tooltip: '../bower_components/sass-bootstrap/js/bootstrap-tooltip',
+        easel: 'vendor/EaselJS-master/lib/easeljs-0.7.0.min',
+        preload: 'vendor/PreloadJS-master/lib/preloadjs-0.4.0.min'
     },
     shim: {
         bootstrap: {
@@ -17,11 +19,20 @@ require.config({
         tooltip: {
             deps: ['jquery'],
             exports: 'jquery'
+        },
+        easel: {
+            deps: ['jquery'],
+            exports: 'jquery'
+        },
+        preload: {
+            deps: ['jquery'],
+            exports: 'jquery'
         }
     }
+
 });
 
-require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) {
+require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip', 'easel', 'preload'], function (app, $) {
     'use strict';
 
     $(document).scroll(function() {
@@ -41,10 +52,120 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
 
     });
 
-    /*$.stellar({
-        verticalOffset: -30,
-        horizontalOffset: 350
-    });*/
+    //--------------------------------------
+    //ORBITING CIRCLES FUNCTIONS
+    //--------------------------------------
+
+    $(document).ready(function(){
+        var CENTER_X = 450;
+        var CENTER_Y = 275;
+        var numCircles = 9;
+        var circleArray = new Array();
+        var lines;
+        var stage = new createjs.Stage("canvas");
+        var queue = new createjs.LoadQueue(false);
+        var circleContainer, lineContainer;
+        var imgArray = ["one","two","three","four","five","six","seven","eight","nine"];
+        queue.addEventListener("complete", handleComplete);
+        queue.loadManifest([{id:"one", src:"../images/one.png"},
+            {id:"two", src:"../images/one.png"},
+            {id:"three", src:"../images/one.png"},
+            {id:"four", src:"../images/one.png"},
+            {id:"five", src:"../images/one.png"},
+            {id:"six", src:"../images/one.png"},
+            {id:"seven", src:"../images/one.png"},
+            {id:"eight", src:"../images/one.png"},
+            {id:"nine", src:"../images/one.png"}
+        ]);
+
+        function handleComplete(event){
+            instantiateCircles();
+            instantiateLines();
+            addContainers();
+        }
+
+        createjs.Ticker.addEventListener("tick", handleTick);
+        createjs.Ticker.setFPS(50);
+
+        function handleTick(){
+            orbitCircles();
+            updateLines();
+            stage.update();
+        }
+        function instantiateCircles(){
+            circleContainer = new createjs.Container();
+            for(var i = 0; i<numCircles; i++){
+                var temp = new Circle(new createjs.Bitmap(queue.getResult(imgArray[i])));
+                circleContainer.addChild(temp.img);
+                circleContainer.addChild(temp.outline);
+                circleArray[i] = temp;
+            }
+        }
+        function instantiateLines(){
+            lineContainer = new createjs.Container();
+            lines = new createjs.Shape();
+            lines.alpha = 0.5;
+            lineContainer.addChild(lines);
+        }
+        function addContainers(){
+            stage.addChild(lineContainer);
+            stage.addChild(circleContainer);
+        }
+        function Circle(bmp){
+            var dir = Math.round(Math.random()*1);
+            if(dir==0){this.direction = -1;}
+            if(dir==1){this.direction = 1;}
+            //this.img = bmp;
+            var s = new createjs.Shape();
+            s.graphics.beginFill("black");
+            s.graphics.drawCircle(0,0,128-8);
+            s.shadow = new createjs.Shadow("white",0,0,12);
+            this.img = s;
+            this.img.scaleX = Math.random()*0.3+0.1;
+            this.img.scaleY = this.img.scaleX;
+            this.outline = new createjs.Shape();
+            this.outline.graphics.setStrokeStyle(2);
+            this.outline.graphics.beginStroke("#578c24");
+            this.outline.graphics.drawCircle(0,0,125*this.img.scaleX+3);
+            //this.offset = (this.img.getBounds().width*this.img.scaleX)/2;
+            this.offset = 0;
+            this.r = Math.random()*120+130;
+            var ang = Math.random()*360;
+            this.angle = ang;
+            var radians = ang * Math.PI/180;
+            this.rads = radians;
+
+            this.speedMultiplier = (.6-this.img.scaleX)*(1-Math.random()*0.7);
+        }
+        function orbitCircles(){
+            var temp;
+            for(var i=0;i<circleArray.length;i++){
+                temp = circleArray[i];
+                temp.angle += (  0.1 / ((250/temp.r)/2)  ) * (temp.speedMultiplier/2.5);
+                temp.rads = temp.angle * Math.PI/180;
+                var xo = temp.r*Math.cos(temp.rads*temp.direction);
+                var yo = temp.r*Math.sin(temp.rads*temp.direction);
+                temp.img.x = CENTER_X + xo - temp.offset;
+                temp.img.y = CENTER_Y + yo - temp.offset;
+                temp.outline.x = temp.img.x + temp.offset;
+                temp.outline.y = temp.img.y + temp.offset;
+            }
+        }
+        function updateLines(){
+            lines.graphics.clear();
+            lines.graphics.setStrokeStyle(2).beginStroke("#578c24");
+            for(var i = 0; i<numCircles; i++){
+                var temp = circleArray[i];
+                lines.graphics.moveTo(temp.img.x+temp.offset, temp.img.y+temp.offset);
+                var temp2 = circleArray[(i+1)%numCircles];
+                lines.graphics.lineTo(temp2.img.x+temp2.offset, temp2.img.y+temp2.offset);
+                lines.graphics.moveTo(temp.img.x+temp.offset, temp.img.y+temp.offset);
+                lines.graphics.lineTo(450,275);
+            }
+        }
+    });
+
+    //END OF ORBITING CIRCLES FUNCTIONS
 
     $(function() {
         $('[data-toggle=tooltip]').tooltip();
