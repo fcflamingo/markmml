@@ -41,10 +41,10 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
 
     });
 
-    $.stellar({
-        verticalOffset: -30,
-        horizontalOffset: 350
-    });
+//    $.stellar({
+//        verticalOffset: -30,
+//        horizontalOffset: 350
+//    });
 
     $(function() {
         $('[data-toggle=tooltip]').tooltip();

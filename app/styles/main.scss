@@ -421,9 +421,22 @@ article {
 
 .work-container {
   width: 100%;
-  background: url(../images/building-ny.png) no-repeat #F2F2F2;
+  background: no-repeat #F2F2F2;
+  position: relative;
+}
+
+.work-bg {
+  width: 100%;
+  height: 100%;
+  background: url(../images/buildings.png) no-repeat #F2F2F2;
   background-size: cover;
+  background-position: center;
   text-align: center;
+  position: absolute;
+  opacity: 0.15;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 .circle {
@@ -454,7 +467,45 @@ article {
   bottom: 160px;
 }
 
+@keyframes pulse-2 {
+  0% {
+    margin: 0;
+    -webkit-transform: scale(0.25);
+  }
+  50% {
+    margin: 0 -30px -30px -30px;
+    -webkit-transform: scale(1);
+  }
+  100% {
+    margin: 0;
+    -webkit-transform: scale(0.25);
+  }
+}
+
+@-webkit-keyframes pulse-2 {
+  0% {
+    margin: 0;
+    -webkit-transform: scale(0.25);
+  }
+  50% {
+    margin: 0 -30px -30px -30px;
+    -webkit-transform: scale(1);
+  }
+  100% {
+    margin: 0;
+    -webkit-transform: scale(0.25);
+  }
+}
+
 .ball {
+  animation-name: pulse-2;
+  -webkit-animation-name: pulse-2;
+
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
   width: 30px;
   height:30px;
   position: absolute;
@@ -730,30 +781,24 @@ article {
 @keyframes pulse {
   0% {
     transform: scale(0.9);
-    opacity: 0.7;
   }
   50% {
     ransform: scale(1);
-    opacity: 1;
   }
   100% {
     transform: scale(0.9);
-    opacity: 0.7;
   }
 }
 
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scale(0.95);
-    opacity: 0.7;
   }
   50% {
     -webkit-transform: scale(1);
-    opacity: 1;
   }
   100% {
     -webkit-transform: scale(0.95);
-    opacity: 0.7;
   }
 }
 
