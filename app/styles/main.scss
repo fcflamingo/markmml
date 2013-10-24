@@ -109,7 +109,7 @@ textarea {
 }
 
 .header-container {
-  font-family: "jaf-facitweb";
+  font-family: "jaf-facitweb", Helvetica, Arial;
   text-shadow: 1px 1px 1px #ffffff;
   position: fixed;
   width:100%;
@@ -195,7 +195,7 @@ nav {
 .main {
   h1 {
     color: #F2F2F2;
-    font-family: "Facitweb-Extralight";
+    font-family: "facitweb-extralight", Helvetica, Arial;
     text-align: center;
     top: 30px;
     position: relative;
