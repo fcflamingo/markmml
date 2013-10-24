@@ -28,7 +28,7 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
 
         var top = $(document).scrollTop();
 
-        if (top > 600) {
+        if (top > 200) {
             $('.header-container').removeClass('fadeOut');
             $('.header-container').addClass('slideRight', 1000);
 
