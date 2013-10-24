@@ -52,7 +52,7 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
 
     $("ul li a[href^='#']").on('click', function(e) {
         e.preventDefault();
-        $('html, body').animate({ scrollTop: $(this.hash).offset().top }, 300);
+        $('html, body').animate({ scrollTop: $(this.hash).offset().top -60 }, 300);
 
         // edit: Opera and IE requires the "html" elm. animated
     });

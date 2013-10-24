@@ -191,7 +191,7 @@ nav {
 
 #attorneys {
   position: relative;
-  top: -40px;
+  margin-top: -40px;
 }
 
 .main {
@@ -440,7 +440,8 @@ article {
     padding-bottom: 30px;
     display: block;
     width: 295px;
-    margin: 50px auto -80px auto;
+    margin: 0px auto -80px auto;
+    padding-top: 50px;
   }
 }
 
