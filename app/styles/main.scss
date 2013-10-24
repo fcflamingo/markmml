@@ -352,9 +352,11 @@ article {
       font-size: 14px;
       a {
         color: #578c24;
+        padding-bottom: 2px;
         &:hover {
           text-decoration: none;
           color: white;
+          border-bottom: 3px solid #578c24;
         }
       }
     }
