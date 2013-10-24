@@ -64,6 +64,11 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
         // edit: Opera and IE requires the "html" elm. animated
     });
 
+    $('.button.location').on('click', function() {
+        $(this).addClass('expand');
+        $('.button.location').not(this).removeClass('expand');
+    });
+
     console.log(app);
     console.log('Running jQuery %s', $().jquery);
 });
