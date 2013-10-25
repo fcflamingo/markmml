@@ -41,6 +41,22 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
 
     });
 
+    $(document).scroll(function() {
+
+        var top = $(document).scrollTop();
+
+        if (top > 288) {
+            $('.top-bg').addClass('hide');
+
+        }
+
+        else {
+            $('.top-bg').removeClass('hide');
+
+        }
+
+    });
+
 //    $.stellar({
 //        verticalOffset: -30,
 //        horizontalOffset: 350
