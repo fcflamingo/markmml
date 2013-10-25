@@ -129,6 +129,7 @@ textarea {
   min-height: 300px;
   text-align: center;
   padding-bottom: 40px;
+  position: relative;
   footer {
     color: white;
     padding: 20px 0;
@@ -321,14 +322,15 @@ article {
 .intro-container {
   width: 100%;
   height:680px;
-  background:#F2F2F2;
   text-align: center;
+  position: relative;
 }
 
 .color-split {
   width: 100%;
   height: 40%;
   background: #41473d;
+  position: relative;
 }
 
 .logo {
@@ -422,11 +424,11 @@ article {
 
 .main-container {
   background: #33382f;
+  position: relative;
 }
 
 .work-container {
   width: 100%;
-  background: no-repeat #F2F2F2;
   position: relative;
   h1 {
     color: #383d35;
@@ -451,7 +453,7 @@ article {
   background-size: cover;
   background-position: center;
   text-align: center;
-  position: absolute;
+  position: fixed;
   opacity: 0.15;
   top: 0;
   left: 0;
