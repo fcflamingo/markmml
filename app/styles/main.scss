@@ -110,7 +110,7 @@ textarea {
   text-shadow: 1px 1px 1px #ffffff;
   position: fixed;
   width:100%;
-  z-index:1;
+  z-index:999;
   background: rgba(221, 221, 217, 1.0);
   visibility: hidden;
   overflow: hidden;
@@ -130,6 +130,7 @@ textarea {
   text-align: center;
   padding-bottom: 40px;
   position: relative;
+  z-index: 1;
   footer {
     color: white;
     padding: 20px 0;
@@ -187,12 +188,8 @@ nav {
     MOBILE: Main
    ============== */
 
-#attorneys {
-  position: relative;
-  margin-top: -40px;
-}
-
 .main {
+  position: relative;
   h1 {
     color: #F2F2F2;
     font-family: "jaf-facitweb", Helvetica, Arial;
@@ -324,6 +321,8 @@ article {
   height:680px;
   text-align: center;
   position: relative;
+  z-index: 1;
+  background: #fff;
 }
 
 .color-split {
@@ -425,12 +424,24 @@ article {
 .main-container {
   background: #33382f;
   position: relative;
+  .mix-board {
+    position: fixed;
+    background: url(../images/mixboard.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
 }
 
 .work-container {
   width: 100%;
   position: relative;
   padding: 60px 0 60px 0;
+  z-index: 1;
+  background: #fff;
   h1 {
     color: #383d35;
     font-family: "jaf-facitweb", Helvetica, Arial;
@@ -457,7 +468,7 @@ article {
   opacity: 0.15;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: 1;
 }
 
 
@@ -845,10 +856,6 @@ article {
 /* ====================
     WIDE: CSS3 Effects
    ==================== */
-
-  .header-container {
-    z-index: 1;
-  }
 
 /* ============
     WIDE: Menu
