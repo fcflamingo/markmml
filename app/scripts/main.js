@@ -45,7 +45,7 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
 
         var top = $(document).scrollTop();
 
-        if (top > 250) {
+        if (top > 200) {
             $('.top-bg').addClass('hide');
 
         }
