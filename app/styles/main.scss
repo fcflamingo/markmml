@@ -2,9 +2,6 @@ $iconSpritePath: "../images/glyphicons-halflings.png";
 $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
 @import 'sass-bootstrap/lib/bootstrap';
-@import "http://webfonts.justanotherfoundry.com/Facit/";
-
-
 
 .tooltip {
   white-space: nowrap;
@@ -197,7 +194,8 @@ nav {
 .main {
   h1 {
     color: #F2F2F2;
-    font-family: "facitweb-extralight", Helvetica, Arial;
+    font-family: "jaf-facitweb", Helvetica, Arial;
+    font-weight: 200;
     text-align: center;
     top: 30px;
     position: relative;
@@ -432,7 +430,8 @@ article {
   position: relative;
   h1 {
     color: #383d35;
-    font-family: "facitweb-extralight", Helvetica, Arial;
+    font-family: "jaf-facitweb", Helvetica, Arial;
+    font-weight: 200;
     text-align: center;
     position: relative;
     font-size: 4em;
