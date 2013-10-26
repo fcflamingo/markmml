@@ -29,13 +29,13 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
         var top = $(document).scrollTop();
 
         if (top > 200) {
-            $('.header-container').removeClass('fadeOut');
+            $('.header-container').removeClass('is-fade-out');
             $('.header-container').addClass('slideRight', 1000);
 
         }
 
         else {
-            $('.header-container').addClass('fadeOut');
+            $('.header-container').addClass('is-fade-out');
 
         }
 
@@ -45,7 +45,7 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
 
         var top = $(document).scrollTop();
 
-        if (top > 220) {
+        if (top > 200) {
             $('.top-bg').addClass('hide');
 
         }
