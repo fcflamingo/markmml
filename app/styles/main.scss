@@ -135,6 +135,16 @@ textarea {
     color: white;
     padding: 20px 0;
   }
+  .bg {
+    position: absolute;
+    background: url(../images/instruments.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+  }
 }
 
 .title {
@@ -361,6 +371,7 @@ article {
     margin: 150px auto auto auto;
     white-space: nowrap;
     border-top: 2px solid #578c24;
+    text-align: center;
     li {
       display: inline-block;
       padding: 10px 7%;
@@ -525,11 +536,7 @@ article {
         color: #578c24;
       }
     }
-    &:hover {
-      background: white;
-      color: #578c24;
-    }
-    &.expand  {
+    &:hover, &.is-toggled {
       color: #578c24;
       border: 2px solid white;
       background: white;
