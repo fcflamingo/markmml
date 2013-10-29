@@ -57,23 +57,18 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
 
     });
 
-//    $.stellar({
-//        verticalOffset: -30,
-//        horizontalOffset: 350
-//    });
-
     $(function() {
         $('[data-toggle=tooltip]').tooltip();
     });
 
-    $("ul li a[href^='#'], .js-toggle").on('click', function(e) {
+    $('ul li a[href^="#"], .js-toggle').on('click', function(e) {
         e.preventDefault();
         $('html, body').animate({ scrollTop: $(this.hash).offset().top -60 }, 300);
 
         // edit: Opera and IE requires the "html" elm. animated
     });
 
-    $('.js-toggle').on('click', function(e) {
+    $('.js-toggle').on('click', function() {
         $('.location').removeClass('is-toggled');
         $(this.hash).addClass('is-toggled');
     });
@@ -82,7 +77,7 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
         $(this).removeClass('is-toggled');
     });
 
-    $(".logo-nav").on('click', function(e) {
+    $('.logo-nav').on('click', function(e) {
         e.preventDefault();
         $('html, body').animate({scrollTop: 0}, 300);
 
