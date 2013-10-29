@@ -66,11 +66,20 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
         $('[data-toggle=tooltip]').tooltip();
     });
 
-    $("ul li a[href^='#']").on('click', function(e) {
+    $("ul li a[href^='#'], .js-toggle").on('click', function(e) {
         e.preventDefault();
         $('html, body').animate({ scrollTop: $(this.hash).offset().top -60 }, 300);
 
         // edit: Opera and IE requires the "html" elm. animated
+    });
+
+    $('.js-toggle').on('click', function(e) {
+        $('.location').removeClass('is-toggled');
+        $(this.hash).addClass('is-toggled');
+    });
+
+    $('.location').on('mouseleave', function() {
+        $(this).removeClass('is-toggled');
     });
 
     $(".logo-nav").on('click', function(e) {
@@ -80,10 +89,10 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
         // edit: Opera and IE requires the "html" elm. animated
     });
 
-    $('.button.location').on('click', function() {
-        $(this).addClass('expand');
-        $('.button.location').not(this).removeClass('expand');
-    });
+//    $('.button.location').on('click', function() {
+//        $(this).addClass('expand');
+//        $('.button.location').not(this).removeClass('expand');
+//    });
 
     console.log(app);
     console.log('Running jQuery %s', $().jquery);
