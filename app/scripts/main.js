@@ -28,33 +28,58 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
 
         var top = $(document).scrollTop();
 
-        if (top > 600) {
-            $('.header-container').removeClass('fadeOut');
+        if (top > 200) {
+            $('.header-container').removeClass('is-fade-out');
             $('.header-container').addClass('slideRight', 1000);
 
         }
 
         else {
-            $('.header-container').addClass('fadeOut');
+            $('.header-container').addClass('is-fade-out');
 
         }
 
     });
 
-    /*$.stellar({
-        verticalOffset: -30,
-        horizontalOffset: 350
-    });*/
+    $(document).scroll(function() {
+
+        var top = $(document).scrollTop();
+
+        if (top > 200) {
+            $('.top-bg').addClass('hide');
+
+        }
+
+        else {
+            $('.top-bg').removeClass('hide');
+
+        }
+
+    });
+
+//    $.stellar({
+//        verticalOffset: -30,
+//        horizontalOffset: 350
+//    });
 
     $(function() {
         $('[data-toggle=tooltip]').tooltip();
     });
 
-    $("ul li a[href^='#']").on('click', function(e) {
+    $("ul li a[href^='#'], .js-toggle").on('click', function(e) {
         e.preventDefault();
-        $('html, body').animate({ scrollTop: $(this.hash).offset().top }, 300);
+        $('html, body').animate({ scrollTop: $(this.hash).offset().top -60 }, 300);
 
         // edit: Opera and IE requires the "html" elm. animated
+    });
+
+    $('.js-toggle').on('click', function(e) {
+        $('.location').removeClass('is-toggled');
+        $(this.hash).addClass('is-toggled');
+    });
+
+    $('.location').on('mouseleave', function() {
+        $(this).removeClass('is-toggled');
     });
 
     $(".logo-nav").on('click', function(e) {
@@ -63,6 +88,11 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
 
         // edit: Opera and IE requires the "html" elm. animated
     });
+
+//    $('.button.location').on('click', function() {
+//        $(this).addClass('expand');
+//        $('.button.location').not(this).removeClass('expand');
+//    });
 
     console.log(app);
     console.log('Running jQuery %s', $().jquery);
