@@ -9,8 +9,11 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
+
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/7de99905.main.css">
+        <link rel="stylesheet" href="styles/9503f50b.main.css">
+        <script type="text/javascript" src="//use.typekit.net/dmg1rse.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
         <script src="scripts/vendor/f7f27360.modernizr.js"></script>
         <script type="text/javascript">
             (function() {
@@ -24,6 +27,8 @@
         <script src="//squaresend.com/squaresend.js"></script>
     </head>
     <body>
+    <div class="top-bg"></div>
+
     <div class="header-container">
         <header class="wrapper clearfix">
             <div class="logo-nav"></div>
@@ -38,21 +43,23 @@
         </header>
     </div>
 
-    <div class="intro-container">
-        <div class="color-split">
-            <div class="logo">
-                <ul>
-                    <li><a href="#attorneys">Attorneys</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
+    <div class="color-split">
 
-            <div class="icon-clearfix">
-                <a class="beverly icon" href="https://maps.google.com/maps?client=safari&rls=en&q=120+El+Camino,+Suite+104+Beverly+Hills,+CA+90212&oe=UTF-8&um=1&ie=UTF-8&hl=en&sa=N&tab=wl" target="_blank" data-toggle="tooltip" title="view map of Beverly Hills office">BH</a>
-                <a class="new-york icon" href="https://maps.google.com/maps?client=safari&rls=en&q=9+St+Marks+Pl,+Manhattan,+New+York,+10003&oe=UTF-8&um=1&ie=UTF-8&hl=en&sa=N&tab=wl" target="_blank" data-toggle="tooltip" title="view map of New York office">NY</a>
-            </div>
+        <div class="logo">
+            <ul>
+                <li><a href="#attorneys">Attorneys</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
+
+        <div class="icon-clearfix">
+            <a class="beverly icon js-toggle" href="#bh-contact" data-toggle="tooltip" title="contact the Beverly Hills office">BH</a>
+            <a class="new-york icon js-toggle" href="#ny-contact" data-toggle="tooltip" title="contact the New York office">NY</a>
+        </div>
+    </div>
+
+    <div class="intro-container">
         <div class="intro wrapper clearfix">
 
          <p class="mission-statement">our mission is to provide
@@ -65,15 +72,15 @@
 
         </div> <!-- #main -->
     </div> <!-- #intro-container -->
-    <div id="attorneys"></div>
-    <div class="main-container">
+    <div class="main-container" id="attorneys">
+        <div class="bg"></div>
         <div class="main wrapper clearfix">
 
             <h1>attorneys</h1>
 
             <article>
                 <header>
-                    <a class="icon-small bh-icon" href="https://maps.google.com/maps?client=safari&rls=en&q=120+El+Camino,+Suite+104+Beverly+Hills,+CA+90212&oe=UTF-8&um=1&ie=UTF-8&hl=en&sa=N&tab=wl" target="_blank"></a>
+                    <a class="icon-small bh-icon js-toggle" href="#bh-contact"></a>
                     <h2>Doug Mark</h2>
 
                     <p>Doug Mark has practiced law in the entertainment industry since 1986. He has been a
@@ -87,7 +94,7 @@
                     </p>
                 </header>
                 <section>
-                    <a class="icon-small bh-icon" href="https://maps.google.com/maps?client=safari&rls=en&q=120+El+Camino,+Suite+104+Beverly+Hills,+CA+90212&oe=UTF-8&um=1&ie=UTF-8&hl=en&sa=N&tab=wl" target="_blank"></a>
+                    <a class="icon-small bh-icon js-toggle" href="#bh-contact"></a>
                     <h2>David Ferreria</h2>
                     <p>David Ferreria represents a wide range of clients in music, entertainment, multimedia
                         and art and is equally adept at handling transactions for artists, business entities
@@ -103,7 +110,7 @@
                         Shriner. He lives in Culver City with his wife, Christie, and two sons, Aidan and Liam.</p>
                 </section>
                 <section>
-                    <a class="icon-small ny-icon" href="https://maps.google.com/maps?client=safari&rls=en&q=9+St+Marks+Pl,+Manhattan,+New+York,+10003&oe=UTF-8&um=1&ie=UTF-8&hl=en&sa=N&tab=wl" target="_blank"></a>
+                    <a class="icon-small ny-icon js-toggle" href="#ny-contact"></a>
                     <h2>David Jacobs</h2>
                     <p>David Jacobs joined Mark Music & Media Law in 2008 and is a partner with the firm.
                         David  is a hands-on music attorney (and sometimes manager) based in New York, with
@@ -123,7 +130,7 @@
                         patience, ingenuity, enthusiasm, and empathy as possible.</p>
                 </section>
                 <section>
-                    <a class="icon-small bh-icon" href="https://maps.google.com/maps?client=safari&rls=en&q=120+El+Camino,+Suite+104+Beverly+Hills,+CA+90212&oe=UTF-8&um=1&ie=UTF-8&hl=en&sa=N&tab=wl" target="_blank"></a>
+                    <a class="icon-small bh-icon js-toggle" href="#bh-contact"></a>
                     <h2>Matt Cuttler</h2>
 
                     <p>Matt Cuttler (admitted in NY) received his Bachelor's degree from SUNY Albany in 2001
@@ -133,7 +140,7 @@
                         and Bankruptcy Litigation Division.</p>
                 </section>
                 <section>
-                    <a class="icon-small ny-icon" href="https://maps.google.com/maps?client=safari&rls=en&q=9+St+Marks+Pl,+Manhattan,+New+York,+10003&oe=UTF-8&um=1&ie=UTF-8&hl=en&sa=N&tab=wl" target="_blank"></a>
+                    <a class="icon-small ny-icon js-toggle" href="#ny-contact"></a>
                     <h2>Clare Paterson</h2>
                     <p>Clare Paterson joined Mark Music & Media Law in 2013 and has been practicing since 2010.
                         She is a graduate of McGill University's Faculty of Law, where she helped found a free legal
@@ -142,7 +149,7 @@
                 </section>
 
                 <section>
-                    <a class="icon-small bh-icon" href="https://maps.google.com/maps?client=safari&rls=en&q=120+El+Camino,+Suite+104+Beverly+Hills,+CA+90212&oe=UTF-8&um=1&ie=UTF-8&hl=en&sa=N&tab=wl" target="_blank"></a>
+                    <a class="icon-small bh-icon js-toggle" href="#bh-contact"></a>
                     <h2>Eric Morris</h2>
                     <p>Eric Morris has been an artist, tour manager, venue promoter and worked within both indie and
                         major record labels. Each stop has helped create a unique perspective he brings to bear in
@@ -165,24 +172,7 @@
 
         <div class="work wrapper clearfix">
 
-
-
-                <div class="circle pulse">
-                    <div class="music"></div>
-                </div>
-                <div class="balls">
-                    <div class="ball one" data-stellar-ratio=".7"></div>
-                    <div class="ball two" data-stellar-ratio=".6"></div>
-                    <div class="ball three" data-stellar-ratio=".7"></div>
-                    <div class="ball four" data-stellar-ratio=".5"></div>
-                    <div class="ball five" data-stellar-ratio=".5"></div>
-                    <div class="ball six" data-stellar-ratio=".6"></div>
-                    <div class="ball seven" data-stellar-ratio=".7"></div>
-                    <div class="ball eight" data-stellar-ratio=".5"></div>
-                    <div class="ball nine" data-stellar-ratio=".6"></div>
-                    <div class="ball ten" data-stellar-ratio=".7"></div>
-                    <div class="ball eleven" data-stellar-ratio=".5"></div>
-                </div>
+            <h1>our work</h1>
 
             <p class="work-words">Our work primarily revolves around the entertainment industry, i.e., live
                 entertainment, recording industry, music publishing, television, motion picture and books.
@@ -204,12 +194,13 @@
 
 
     <div class="footer-container" id="contact">
+        <div class="bg"></div>
         <footer class="wrapper">
             <h3>- Contact -</h3>
 
             <a href="mailto:quaidwalker@qwdesigns.com?sqs_title=Drop+us+a+line" class="button">Email Us</a>
             <a href="facebook.com" class="button">Facebook</a>
-            <div class="button location">
+            <div class="button location" id="bh-contact">
                 Beverly Hills<br>
                 <span>
                     Tel. 310.818.7240<br>
@@ -217,14 +208,13 @@
                     <a href="https://maps.google.com/maps?client=safari&rls=en&q=120+El+Camino,+Suite+104+Beverly+Hills,+CA+90212&oe=UTF-8&um=1&ie=UTF-8&hl=en&sa=N&tab=wl" target="_blank">Map</a>
                 </span>
             </div>
-            <div class="button location">
+            <div class="button location" id="ny-contact">
                 New York<br>
                 <span>
                     Tel. 646.274.3097<br>
                     <a href="https://maps.google.com/maps?client=safari&rls=en&q=9+St+Marks+Pl,+Manhattan,+New+York,+10003&oe=UTF-8&um=1&ie=UTF-8&hl=en&sa=N&tab=wl" target="_blank">Map</a>
                 </span>
             </div>
-
         </footer>
 
     </div>
@@ -243,7 +233,7 @@
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
 
-        <script data-main="scripts/98b2dc27.main" src="bower_components/requirejs/require.js"></script>
+        <script data-main="scripts/066eca44.main" src="bower_components/requirejs/require.js"></script>
 
 
 </body>
