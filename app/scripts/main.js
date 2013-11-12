@@ -89,6 +89,7 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
     });
     $('.terms-container button').on('click', function() {
         $('.terms-container').removeClass('is-show-terms');
+        $('.terms-container .scroll-wrap').animate({scrollTop: 0});
     });
 
 //    $('.button.location').on('click', function() {
