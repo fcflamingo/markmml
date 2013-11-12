@@ -425,13 +425,15 @@ article {
 }
 
 .logo {
-  width:300px;
-  height: auto;
+  width: 300px;
+  height: 140px;
   position: absolute;
-  left:50%;
+  left: 50%;
   background: url(../images/logo-mobile.png) no-repeat;
+  -webkit-background-size: 100%;
   background-size: 100%;
   margin: 30px auto 0 -150px;
+  top: 40px;
   ul {
     list-style: none;
     margin: 150px auto auto auto;
@@ -791,7 +793,8 @@ article {
     left:50%;
     background: url(../images/logo.png) no-repeat;
     background-size: contain;
-    margin: 120px auto 0 -250px;
+    margin: 130px auto 0 -250px;
+    top: 0;
     ul {
       margin: 40px auto auto auto;
       border-top: 2px solid #578c24;
