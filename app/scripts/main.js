@@ -84,6 +84,13 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
         // edit: Opera and IE requires the "html" elm. animated
     });
 
+    $('footer a.terms').on('click', function() {
+        $('.terms-container').addClass('is-show-terms');
+    });
+    $('.terms-container button').on('click', function() {
+        $('.terms-container').removeClass('is-show-terms');
+    });
+
 //    $('.button.location').on('click', function() {
 //        $(this).addClass('expand');
 //        $('.button.location').not(this).removeClass('expand');
