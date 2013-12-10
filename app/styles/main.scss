@@ -122,6 +122,63 @@ textarea {
   }
 }
 
+.terms-container {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background: rgba(47, 49, 44, 0.95);
+  color: #fff;
+  text-align: left;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0;
+  width: 0;
+  .scroll-wrap {
+    width: 0;
+    height: 0;
+    display: block;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll !important;
+  }
+  -webkit-transition: opacity 1s ease-in-out;
+  &.is-show-terms {
+    display: block;
+    opacity: 1;
+    width: 100%;
+    z-index: 9999;
+    .scroll-wrap {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  button {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 12px;
+    right: 12px;
+    color: #fff;
+    opacity: 1;
+    z-index: 9999;
+    &:hover, &:focus {
+      color: #fff;
+      opacity: 0.75;
+      outline: none;
+    }
+  }
+  h1 {
+    font-size: 22px;
+    padding: 20px;
+  }
+  p {
+    font-size: 12px;
+    padding: 0 20px 20px 20px;
+  }
+}
+
 .footer-container {
   background: rgb(32, 32, 30);
   height: auto;
@@ -133,6 +190,21 @@ textarea {
   footer {
     color: white;
     padding: 20px 0;
+    a {
+      &.terms {
+        cursor: pointer;
+        display: block;
+        color: #fff;
+        position: absolute;
+        bottom: 20px;
+        right: 40px;
+        font-size: 12px;
+        &:hover {
+          border-bottom: 1px solid #578c24;
+          bottom: 19px;
+        }
+      }
+    }
   }
   .bg {
     position: absolute;
@@ -358,13 +430,15 @@ article {
 }
 
 .logo {
-  width:300px;
-  height: auto;
+  width: 300px;
+  height: 140px;
   position: absolute;
-  left:50%;
+  left: 50%;
   background: url(../images/logo-mobile.png) no-repeat;
+  -webkit-background-size: 100%;
   background-size: 100%;
   margin: 30px auto 0 -150px;
+  top: 40px;
   ul {
     list-style: none;
     margin: 150px auto auto auto;
@@ -724,7 +798,8 @@ article {
     left:50%;
     background: url(../images/logo.png) no-repeat;
     background-size: contain;
-    margin: 100px auto 0 -250px;
+    margin: 130px auto 0 -250px;
+    top: 0;
     ul {
       margin: 40px auto auto auto;
       border-top: 2px solid #578c24;
@@ -755,6 +830,7 @@ article {
     left:0px;
     overflow: hidden;
   }
+
 
 /* ========================
     INTERMEDIATE: IE Fixes
@@ -799,8 +875,24 @@ article {
   .main {
     article {
       display: block;
-      width: 57%;
+      width: 70%;
       margin: 60px auto;
+    }
+  }
+
+  .terms-container {
+    position: fixed;
+    width: 700px;
+    height: 400px;
+    top: 50%;
+    margin-top: -200px;
+    left: 50%;
+    margin-left: -350px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    &.is-show-terms {
+      width: 700px;
     }
   }
 
@@ -833,7 +925,7 @@ article {
     left:50%;
     background: url(../images/logo.png) no-repeat;
     background-size: contain;
-    margin: 100px auto 0 -400px;
+    margin: 120px auto 0 -400px;
     ul {
       margin: 70px auto;
       border-top: 3px solid #578c24;
@@ -871,7 +963,7 @@ article {
     left:50%;
     background: url(../images/logo.png) no-repeat;
     background-size: contain;
-    margin: 100px auto 0 -400px;
+    margin: 120px auto 0 -400px;
   }
 
   .icon-clearfix {
