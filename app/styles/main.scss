@@ -204,6 +204,19 @@ textarea {
           bottom: 19px;
         }
       }
+      &.fc-link {
+        cursor: pointer;
+        display: block;
+        color: #fff;
+        position: absolute;
+        bottom: 20px;
+        left: 40px;
+        font-size: 12px;
+        &:hover {
+          border-bottom: 1px solid #578c24;
+          bottom: 19px;
+        }
+      }
     }
   }
   .bg {
