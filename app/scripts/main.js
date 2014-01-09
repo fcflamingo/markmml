@@ -24,22 +24,22 @@ require.config({
 require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) {
     'use strict';
 
-    $(document).scroll(function() {
-
-        var top = $(document).scrollTop();
-
-        if (top > 200) {
-            $('.header-container').removeClass('is-fade-out');
-            $('.header-container').addClass('slideRight', 1000);
-
-        }
-
-        else {
-            $('.header-container').addClass('is-fade-out');
-
-        }
-
-    });
+//    $(document).scroll(function() {
+//
+//        var top = $(document).scrollTop();
+//
+//        if (top > 200) {
+//            $('.header-container').removeClass('is-fade-out');
+//            $('.header-container').addClass('slideRight', 1000);
+//
+//        }
+//
+//        else {
+//            $('.header-container').addClass('is-fade-out');
+//
+//        }
+//
+//    });
 
     $(document).scroll(function() {
 
