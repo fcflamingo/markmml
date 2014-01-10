@@ -96,6 +96,10 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
        $('.header-new').toggleClass('mobile');
     });
 
+    $('.header-new ul a, .header-container a').on('click', function() {
+        $('.header-new').removeClass('mobile');
+    });
+
 //    $('.button.location').on('click', function() {
 //        $(this).addClass('expand');
 //        $('.button.location').not(this).removeClass('expand');
