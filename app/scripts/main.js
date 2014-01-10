@@ -24,23 +24,6 @@ require.config({
 require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) {
     'use strict';
 
-//    $(document).scroll(function() {
-//
-//        var top = $(document).scrollTop();
-//
-//        if (top > 200) {
-//            $('.header-container').removeClass('is-fade-out');
-//            $('.header-container').addClass('slideRight', 1000);
-//
-//        }
-//
-//        else {
-//            $('.header-container').addClass('is-fade-out');
-//
-//        }
-//
-//    });
-
     $(document).scroll(function() {
 
         var top = $(document).scrollTop();
@@ -100,10 +83,6 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
         $('.header-new').removeClass('mobile');
     });
 
-//    $('.button.location').on('click', function() {
-//        $(this).addClass('expand');
-//        $('.button.location').not(this).removeClass('expand');
-//    });
 
     console.log(app);
     console.log('Running jQuery %s', $().jquery);
