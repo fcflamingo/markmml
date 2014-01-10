@@ -24,22 +24,6 @@ require.config({
 require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) {
     'use strict';
 
-    $(document).scroll(function() {
-
-        var top = $(document).scrollTop();
-
-        if (top > 200) {
-            $('.header-container').removeClass('is-fade-out');
-            $('.header-container').addClass('slideRight', 1000);
-
-        }
-
-        else {
-            $('.header-container').addClass('is-fade-out');
-
-        }
-
-    });
 
     $(document).scroll(function() {
 
@@ -77,7 +61,7 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
         $(this).removeClass('is-toggled');
     });
 
-    $('.logo-nav').on('click', function(e) {
+    $('.logo-mobile').on('click', function(e) {
         e.preventDefault();
         $('html, body').animate({scrollTop: 0}, 300);
 
@@ -92,10 +76,14 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
         $('.terms-container .scroll-wrap').animate({scrollTop: 0});
     });
 
-//    $('.button.location').on('click', function() {
-//        $(this).addClass('expand');
-//        $('.button.location').not(this).removeClass('expand');
-//    });
+    $('.mobile-button').on('click', function() {
+       $('.header-new').toggleClass('mobile');
+    });
+
+    $('.header-new ul a, .header-container a').on('click', function() {
+        $('.header-new').removeClass('mobile');
+    });
+
 
     console.log(app);
     console.log('Running jQuery %s', $().jquery);
