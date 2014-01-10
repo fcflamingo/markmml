@@ -92,6 +92,10 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
         $('.terms-container .scroll-wrap').animate({scrollTop: 0});
     });
 
+    $('.mobile-button').on('click', function() {
+       $('.header-new').toggleClass('mobile');
+    });
+
 //    $('.button.location').on('click', function() {
 //        $(this).addClass('expand');
 //        $('.button.location').not(this).removeClass('expand');
