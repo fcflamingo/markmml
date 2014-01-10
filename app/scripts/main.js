@@ -77,7 +77,7 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
         $(this).removeClass('is-toggled');
     });
 
-    $('.logo-nav').on('click', function(e) {
+    $('.logo-mobile').on('click', function(e) {
         e.preventDefault();
         $('html, body').animate({scrollTop: 0}, 300);
 
