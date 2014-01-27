@@ -345,7 +345,27 @@ module.exports = function (grunt) {
             all: {
                 rjsConfig: '<%= yeoman.app %>/scripts/main.js'
             }
-        }
+        },
+        buildcontrol: {
+            options: {
+                dir: 'dist',
+                commit: true,
+                push: true,
+                message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+            },
+            pages: {
+                options: {
+                    remote: ' https://github.com/fcflamingo/markmml.git',
+                    branch: 'gh-pages'
+                }
+            },
+            local: {
+                options: {
+                    remote: '../',
+                    branch: 'build'
+                }
+            }
+          }
     });
 
     grunt.registerTask('server', function (target) {
