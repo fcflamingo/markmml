@@ -9,14 +9,14 @@ define([], function () {
                 var introContainerDistanceFromTop = $('.intro-container').offset().top;
 
                 if (scrollDistanceFromTop >= introContainerDistanceFromTop) {
-                    $('.top-bg').addClass('hide');
+                    $('.top-background').addClass('hide');
                 } else {
-                    $('.top-bg').removeClass('hide');
+                    $('.top-background').removeClass('hide');
                 }
             });
         },
         removeFixedBackgrounds: function () {
-            var backgroundGroup = $('.top-bg, .main-container, .footer-container, .bottom-wrap ');
+            var backgroundGroup = $('.top-background, .attorneys-background, .footer-background, .bottom-wrap ');
 
             backgroundGroup.addClass('is-mobile');
         }

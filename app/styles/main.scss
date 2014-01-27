@@ -284,7 +284,7 @@ a {
     color: white;
     padding: 150px 0;
   }
-  .bg {
+  .footer-background {
     position: absolute;
     background: rgba(0, 0, 0, 0.5);
     background-size: cover;
@@ -293,9 +293,7 @@ a {
     width: 100%;
     top: 0;
     height: 100%;
-  }
-  &.is-mobile {
-    .bg {
+    &.is-mobile {
       background: rgba(0, 0, 0, 0.9);
     }
   }
@@ -482,7 +480,7 @@ article {
 }
 
 
-.top-bg {
+.top-background {
   position: fixed;
   background: url(../images/blend.jpg) no-repeat;
   background-size: cover;
@@ -596,7 +594,7 @@ article {
 .main-container {
   background: #33382f;
   position: relative;
-  .bg {
+  .attorneys-background {
     position: fixed;
     background: url(../images/mixboard.jpg) no-repeat;
     background-size: cover;
@@ -605,9 +603,7 @@ article {
     height: 100%;
     width: 100%;
     top: 0;
-  }
-  &.is-mobile {
-    .bg {
+    &.is-mobile {
       display: none;
     }
   }
@@ -1219,7 +1215,7 @@ article {
 
 @media screen and (max-width: 480px) {
 
-  .top-bg, .color-split {
+  .top-backround, .color-split {
     height: 400px;
   }
 
