@@ -25,10 +25,10 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
     'use strict';
 
 
-    if (!Modernizr.touch) {
-        app.initFixedBackgrounds();
-    } else {
+    if (Modernizr.touch) {
         app.removeFixedBackgrounds();
+    } else {
+        app.initFixedBackgrounds();
     }
 
     $(function() {
