@@ -9,9 +9,9 @@ define([], function () {
                 var introContainerDistanceFromTop = $('#is-intro-container').offset().top;
 
                 if (scrollDistanceFromTop >= introContainerDistanceFromTop) {
-                    $('.top-bg').addClass('hide');
+                    $('#is-first-background').addClass('hide');
                 } else {
-                    $('.top-bg').removeClass('hide');
+                    $('#is-first-background').removeClass('hide');
                 }
             });
         }

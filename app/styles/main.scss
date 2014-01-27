@@ -473,7 +473,7 @@ article {
 }
 
 
-.top-bg {
+#is-first-background {
   position: fixed;
   background: url(../images/blend.jpg) no-repeat;
   background-size: cover;
@@ -482,9 +482,6 @@ article {
   height: 500px;
   width: 100%;
   top: 0;
-  &.hide {
-    display: none;
-  }
 }
 
 #is-intro-container {
@@ -1205,7 +1202,11 @@ article {
 
 @media screen and (max-width: 480px) {
 
-  .top-bg, .color-split {
+  #is-first-background {
+    height: 400px;
+  }
+
+  .color-split {
     height: 400px;
   }
 
