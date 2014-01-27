@@ -25,21 +25,7 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
     'use strict';
 
 
-    $(document).scroll(function() {
-
-        var top = $(document).scrollTop();
-
-        if (top > 200) {
-            $('.top-bg').addClass('hide');
-
-        }
-
-        else {
-            $('.top-bg').removeClass('hide');
-
-        }
-
-    });
+    app.initFixedBackgrounds();
 
     $(function() {
         $('[data-toggle=tooltip]').tooltip();
