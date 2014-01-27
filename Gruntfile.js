@@ -356,7 +356,7 @@ module.exports = function (grunt) {
             pages: {
                 options: {
                     remote: ' https://github.com/fcflamingo/markmml.git',
-                    branch: 'gh-pages'
+                    branch: 'gh-pages-test'
                 }
             },
             local: {
