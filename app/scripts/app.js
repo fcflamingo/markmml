@@ -14,6 +14,11 @@ define([], function () {
                     $('.top-bg').removeClass('hide');
                 }
             });
+        },
+        removeFixedBackgrounds: function () {
+            var backgroundGroup = $('.top-bg, .main-container, .footer-container, .bottom-wrap ');
+
+            backgroundGroup.addClass('is-mobile');
         }
     };
 });

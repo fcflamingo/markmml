@@ -242,6 +242,9 @@ textarea {
   background: rgba(0, 0, 0, 0.75);
   height: 50px;
   padding: 10px 0 10px 0;
+  &.is-mobile {
+    background: #000;
+  }
 }
 a {
   &.terms {
@@ -291,7 +294,13 @@ a {
     top: 0;
     height: 100%;
   }
+  &.is-mobile {
+    .bg {
+      background: rgba(0, 0, 0, 0.9);
+    }
+  }
 }
+
 
 .title {
   color: #181818;
@@ -482,8 +491,8 @@ article {
   height: 500px;
   width: 100%;
   top: 0;
-  &.hide {
-    display: none;
+  &.is-mobile {
+    position: absolute;
   }
 }
 
@@ -596,6 +605,11 @@ article {
     height: 100%;
     width: 100%;
     top: 0;
+  }
+  &.is-mobile {
+    .bg {
+      display: none;
+    }
   }
 }
 
