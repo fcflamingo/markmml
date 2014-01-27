@@ -6,7 +6,7 @@ define([], function () {
         initFixedBackgrounds: function () {
             $(document).scroll(function () {
                 var scrollDistanceFromTop = $(document).scrollTop();
-                var introContainerDistanceFromTop = $('.intro-container').offset().top;
+                var introContainerDistanceFromTop = $('#is-intro-container').offset().top;
 
                 if (scrollDistanceFromTop >= introContainerDistanceFromTop) {
                     $('.top-bg').addClass('hide');
