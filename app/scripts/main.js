@@ -25,11 +25,7 @@ require(['app', 'jquery', 'bootstrap', 'stellar', 'tooltip'], function (app, $) 
     'use strict';
 
 
-    if (Modernizr.touch) {
-        app.removeFixedBackgrounds();
-    } else {
-        app.initFixedBackgrounds();
-    }
+    app.initFixedBackgrounds();
 
     $(function() {
         $('[data-toggle=tooltip]').tooltip();
