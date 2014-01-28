@@ -16,7 +16,7 @@ define([], function () {
             });
         },
         removeFixedBackgrounds: function () {
-            var backgroundGroup = $('.top-background, .attorneys-background, .footer-background, .bottom-wrap ');
+            var backgroundGroup = $('#is-first-background, #is-second-background, #is-third-background, .bottom-wrap ');
 
             backgroundGroup.addClass('is-mobile');
         }
