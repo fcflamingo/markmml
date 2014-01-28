@@ -242,6 +242,9 @@ textarea {
   background: rgba(0, 0, 0, 0.75);
   height: 50px;
   padding: 10px 0 10px 0;
+  &.is-mobile {
+    background: #000;
+  }
 }
 a {
   &.terms {
@@ -281,7 +284,7 @@ a {
     color: white;
     padding: 150px 0;
   }
-  .bg {
+  .footer-background {
     position: absolute;
     background: rgba(0, 0, 0, 0.5);
     background-size: cover;
@@ -290,6 +293,9 @@ a {
     width: 100%;
     top: 0;
     height: 100%;
+    &.is-mobile {
+      background: rgba(0, 0, 0, 0.9);
+    }
   }
 }
 
@@ -482,6 +488,9 @@ article {
   height: 500px;
   width: 100%;
   top: 0;
+  &.is-mobile {
+    position: absolute;
+  }
 }
 
 #is-intro-container {
@@ -584,7 +593,7 @@ article {
 .main-container {
   background: #33382f;
   position: relative;
-  .bg {
+  .attorneys-background {
     position: fixed;
     background: url(../images/mixboard.jpg) no-repeat;
     background-size: cover;
@@ -593,6 +602,9 @@ article {
     height: 100%;
     width: 100%;
     top: 0;
+    &.is-mobile {
+      display: none;
+    }
   }
 }
 

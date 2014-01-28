@@ -14,6 +14,11 @@ define([], function () {
                     $('#is-first-background').removeClass('hide');
                 }
             });
+        },
+        removeFixedBackgrounds: function () {
+            var backgroundGroup = $('.top-background, .attorneys-background, .footer-background, .bottom-wrap ');
+
+            backgroundGroup.addClass('is-mobile');
         }
     };
 });
