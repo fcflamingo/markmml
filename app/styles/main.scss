@@ -242,6 +242,9 @@ textarea {
   background: rgba(0, 0, 0, 0.75);
   height: 50px;
   padding: 10px 0 10px 0;
+  &.is-mobile {
+    background: #000;
+  }
 }
 a {
   &.terms {
@@ -280,16 +283,6 @@ a {
   footer {
     color: white;
     padding: 150px 0;
-  }
-  .bg {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.5);
-    background-size: cover;
-    background-position: center;
-    z-index: 0;
-    width: 100%;
-    top: 0;
-    height: 100%;
   }
 }
 
@@ -473,7 +466,9 @@ article {
 }
 
 
-.top-bg {
+//////////////////////////////////////
+// begin fixed backgrounds
+#is-first-background {
   position: fixed;
   background: url(../images/blend.jpg) no-repeat;
   background-size: cover;
@@ -482,12 +477,42 @@ article {
   height: 500px;
   width: 100%;
   top: 0;
-  &.hide {
+  html.touch & {
+    position: absolute;
+  }
+}
+#is-second-background {
+  position: fixed;
+  background: url(../images/mixboard.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  html.touch & {
     display: none;
   }
 }
 
-.intro-container {
+#is-third-background {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  html.touch & {
+    background: rgba(0, 0, 0, 0.9);
+  }
+}
+// end fixed backgrounds
+///////////////////////////////////////
+
+
+#is-intro-container {
   width: 100%;
   height: auto;
   text-align: center;
@@ -587,16 +612,6 @@ article {
 .main-container {
   background: #33382f;
   position: relative;
-  .bg {
-    position: fixed;
-    background: url(../images/mixboard.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    z-index: 0;
-    height: 100%;
-    width: 100%;
-    top: 0;
-  }
 }
 
 .work-container {
@@ -1205,7 +1220,11 @@ article {
 
 @media screen and (max-width: 480px) {
 
-  .top-bg, .color-split {
+  #is-first-background {
+    height: 400px;
+  }
+
+  .color-split {
     height: 400px;
   }
 

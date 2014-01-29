@@ -2,5 +2,20 @@
 define([], function () {
     'use strict';
 
-    return '\'Allo \'Allo!';
+    return {
+        initFixedBackgrounds: function () {
+            if (!Modernizr.touch) {
+                $(document).scroll(function () {
+                    var scrollDistanceFromTop = $(document).scrollTop();
+                    var introContainerDistanceFromTop = $('#is-intro-container').offset().top;
+
+                    if (scrollDistanceFromTop >= introContainerDistanceFromTop) {
+                        $('#is-first-background').addClass('hide');
+                    } else {
+                        $('#is-first-background').removeClass('hide');
+                    }
+                });
+            }
+        }
+    };
 });
