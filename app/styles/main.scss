@@ -162,7 +162,6 @@ textarea {
       line-height: 50px;
       height: 100%;
       display: inline-block;
-      padding: 0 20px;
       -webkit-transition: background 0.15s ease-in-out;
       &:last-child {
         -webkit-border-bottom-right-radius: 5px;
@@ -172,6 +171,8 @@ textarea {
       }
       a {
         color: #fff;
+        padding: 0 20px;
+        display: block;
       }
     }
   }
