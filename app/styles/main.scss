@@ -7,6 +7,10 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
   white-space: nowrap;
 }
 
+* {
+  text-decoration: none !important;
+}
+
 // mixins //
 
 @mixin box-shadow($top, $left, $blur, $color) {
@@ -135,6 +139,9 @@ textarea {
   -webkit-border-bottom-right-radius: 5px;
   -webkit-border-bottom-left-radius: 5px;
   a {
+    display: block;
+    padding: 0 20px;
+
     &.logo-mobile {
       cursor: pointer;
       width: 271px;
@@ -162,7 +169,6 @@ textarea {
       line-height: 50px;
       height: 100%;
       display: inline-block;
-      padding: 0 20px;
       -webkit-transition: background 0.15s ease-in-out;
       &:last-child {
         -webkit-border-bottom-right-radius: 5px;
@@ -281,8 +287,9 @@ a {
   position: relative;
   z-index: 1;
   footer {
-    color: white;
-    padding: 150px 0;
+    color: #fff;
+    min-height: 200px;
+    padding-top: 100px;
   }
 }
 
@@ -388,7 +395,7 @@ nav {
           content: "BH";
         }
       }
-      &.ny-icon{
+      &.tn-icon{
         &:hover {
           @include transform-rotate(50deg);
           @include box-shadow(2px, 2px, 0px, #6e7464);
@@ -400,7 +407,7 @@ nav {
           box-shadow: none;
         }
         &:before {
-          content: "NY";
+          content: "TN";
         }
       }
     }
@@ -463,6 +470,11 @@ article {
   color: #578c24;
   padding-left: 2px;
   cursor: pointer;
+}
+
+small {
+  font-size: 9pt;
+  opacity: .4;
 }
 
 
@@ -1191,6 +1203,10 @@ article {
     top: 20px;
     position: relative;
     margin-bottom: 20px;
+  }
+
+  .footer-container footer {
+    padding-top: 90px !important;
   }
 }
 
