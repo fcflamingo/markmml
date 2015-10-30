@@ -140,7 +140,7 @@ textarea {
   -webkit-border-bottom-left-radius: 5px;
   a {
     display: block;
-    padding: 0 20px;
+
 
     &.logo-mobile {
       cursor: pointer;
@@ -166,6 +166,7 @@ textarea {
     margin: 0;
     padding: 0;
     li {
+      padding: 0 20px;
       line-height: 50px;
       height: 100%;
       display: inline-block;
@@ -1205,12 +1206,13 @@ small {
     margin-bottom: 20px;
   }
 
-  .footer-container footer {
-    padding-top: 90px !important;
-  }
 }
 
 @media screen and (max-width: 800px) {
+    .footer-container footer {
+      padding: 10px 10px 20px 10px;
+      min-height: 360px;
+     }
 
   .header-new {
     height: 40px;
