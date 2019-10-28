@@ -1,3 +1,5 @@
+# ignore all that below– just edit gh-pages branch like its regular old html.
+
 To start development:
 ```
 # clone the repo
